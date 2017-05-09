@@ -1,0 +1,146 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+var server;
+var debug = require('debug')('uxdbweb:server');
+var https = require('https');
+var fs = require("fs");
+var gdbOpt = require('../routes/utils/db_conection');
+var webconfig = require('../webconfig.json').webserver;
+var checkdbTable = require('../routes/utils/checkdbtable');
+var options = {
+    key: fs.readFileSync('../privatekey.pem'),
+    cert: fs.readFileSync('../certificate.pem')
+};
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+function initServer()
+{
+    var app = require('../app');
+
+    /**
+     * Normalize a port into a number, string, or false.
+     */
+
+    function normalizePort(val) {
+        var port = parseInt(val, 10);
+
+        if (isNaN(port)) {
+            // named pipe
+            return val;
+        }
+
+        if (port >= 0) {
+            // port number
+            return port;
+        }
+
+        return false;
+    }
+
+    /**
+     * Event listener for HTTP server "error" event.
+     */
+
+    function onError(error) {
+        if (error.syscall !== 'listen') {
+            throw error;
+        }
+
+        var bind = typeof port === 'string'
+            ? 'Pipe ' + port
+            : 'Port ' + port;
+
+        // handle specific listen errors with friendly messages
+        switch (error.code) {
+            case 'EACCES':
+                console.error(bind + ' requires elevated privileges');
+                process.exit(1);
+                break;
+            case 'EADDRINUSE':
+                console.error(bind + ' is already in use');
+                process.exit(1);
+                break;
+            default:
+                throw error;
+        }
+    }
+
+    /**
+     * Event listener for HTTP server "listening" event.
+     */
+    function onListening() {
+        var addr = server.address();
+        var bind = typeof addr === 'string'
+            ? 'pipe ' + addr
+            : 'port ' + addr.port;
+        debug('Listening on ' + bind);
+    }
+
+    /**
+     * Get port from environment and store in Express.
+     */
+    var port = normalizePort(webconfig.port || '10001');
+    app.set('port', port);
+    server = https.createServer(options, app);
+
+    server.listen(port);
+    server.on('error', onError);
+    server.on('listening', onListening);
+    console.log("uxdbweb server is starting on port " + port);
+}
+function startServer(){
+    checkdbTable.checkdbTable(function(isErr){
+        if(!isErr){
+            initServer();
+        }else{
+            console.log("数据库表初始化失败！");
+        }
+    });
+}
+function checkdbconnect(){
+    var dbOpt = new gdbOpt();
+    dbOpt.checkConnect(function(isErr) {
+        if (isErr) {
+            dbOpt.connectUxdb(function(isErr) {
+                if (isErr) {
+                    console.log("数据库连接失败！");
+                    return;
+                }
+                dbOpt.createWebdb(function(isErr) {
+                    if (isErr) {
+                        console.log("数据库连接失败！");
+                        return;
+                    }
+                    startServer();
+                })
+            })
+        } else {
+            startServer();
+        }
+    })
+}
+
+// function clusterServer(){
+//     var cluster = require('cluster');
+//     var numCPUs = require('os').cpus().length;
+//     if (cluster.isMaster) {
+//         for (var i = 0; i < numCPUs; i++) {
+//             cluster.fork();
+//         }
+//         cluster.on('listening', function (worker, address) {
+//             console.log('[master] ' + 'listening: worker' + worker.id +
+//                 ',pid:' + worker.process.pid + ', Address:' + address.address + ":" + address.port);
+//         });
+//     } else if (cluster.isWorker) {
+//         exports.getCluster = cluster;
+//         checkuxdbwebdb();
+//     }
+// }
+//clusterServer();
+checkdbconnect();
+

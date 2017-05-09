@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 宋体;
+    position: relative;
+}
+.content{
+    background: url("../images/index/login_background.png") no-repeat;
+    height: 943px;
+    background-size: 1921px 943px;
+}
+.title{
+    color: rgb(100, 220, 244);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.login{
+    height: 400px;
+    background:url("../images/login/input_background_image.png") no-repeat;
+    background-size: 1921px 400px;
+    margin-top: 180px;
+}
+.form{
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    color: #5cd3ff;
+    border: 2px solid #00b3ee;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 50px;
+    padding-left: 10px;
+}
+#image{
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    color: #5cd3ff;
+    background: url("../images/login/a31999aea37b66ce96f0c9bad38e71b2.jpg") no-repeat;
+    background-size: 800px 400px;
+}
+#register{
+    position: absolute;
+    top:5px;
+    right: 10px;
+    color: #4fceee;
+    cursor: pointer;
+}
+#register:hover{
+    color: #f46d19;
+}
+#submit,#reset,#resetReg,#submitReg{
+    color: #fbf9ff;
+    font-size: 16px;
+    background-color: #386f95;
+}
+#submit:hover{
+    box-shadow: 0 0 2px 2px #72d5e4;
+}
+#reset:hover{
+    box-shadow: 0 0 2px 2px #72d5e4;
+}
+#submitReg:hover{
+    box-shadow: 0 0 2px 2px #72d5e4;
+}
+#resetReg:hover{
+    box-shadow: 0 0 2px 2px #72d5e4;
+}
+#username,#password,#checkcode,#usernameReg,#passwordReg,#email,#mobile{
+    background-color: #acd6f0;
+}
+#codeImage{
+    display: block;
+    width: 140px;
+    height: 35px;
+    background: url("../images/login/checkcode_back.png") no-repeat;
+    background-size: 140px 35px;
+}
+#close_btn{
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    color: #ffffff;
+}
+.code{
+    font-size: 23px;
+    text-align: center;
+    color: #00b3ee;
+    margin-top: 3px;
+}
+

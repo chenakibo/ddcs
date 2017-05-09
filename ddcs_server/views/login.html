@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录页面</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="../public/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/libs/jAlert/jAlert-v4.css">
+    <script src="../public/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../public/libs/jAlert/jAlert-v4.min.js"></script>
+    <script src="../public/libs/jAlert/jAlert-functions.min.js"></script>
+    <script src="../public/js/login/login.js"></script>
+    <script src="../public/js/register/register.js"></script>
+    <script src="../public/js/utils/checkcode.js"></script>
+    <script src="../public/js/utils/ux_md5.js"></script>
+    <script src="../public/js/utils/serverconfig.js"></script>
+    <script src="../public/js/utils/alertMessage.js"></script>
+    <script src="../public/js/login/login_ajax.js"></script>
+    <script src="../public/js/register/register_ajax.js"></script>
+</head>
+<body>
+   <div class="container-fluid content">
+       <div class="row" style="border-bottom: 1px solid #13f5ff; padding-bottom: 20px">
+           <h1 class="title">分布式数据采集系统</h1>
+       </div>
+       <div class="row login">
+               <div class="col-md-offset-2 col-md-4">
+                   <div id="image">
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <form class="form-horizontal form">
+                       <h3 style="text-align: center; margin-top: -8px;">用户登录</h3>
+                       <a id="register">注册</a>
+                       <div class="form-group">
+                           <label for="username" class="col-sm-2 control-label"><i class="fa fa-2x fa-user"></i></label>
+                           <div class="col-sm-10">
+                               <input type="text" class="form-control" id="username" placeholder="用户名">
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="password" class="col-sm-2 control-label"><i class="fa fa-2x fa-lock"></i></label>
+                           <div class="col-sm-10">
+                               <input type="password" class="form-control" id="password" placeholder="密码">
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="checkcode" class="col-sm-2 control-label"><i class="fa fa-2x fa-shield"></i></label>
+                           <div class="col-sm-5">
+                               <input type="text" class="form-control" id="checkcode" placeholder="验证码">
+                           </div>
+                           <div class="col-sm-5">
+                               <span id="codeImage"></span>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <div class="col-sm-offset-2 col-sm-5">
+                               <button type="button" class="btn btn-block" id="submit">登录</button>
+                           </div>
+                           <div class="col-sm-5">
+                               <button type="button" class="btn btn-block" id="reset">重置</button>
+                           </div>
+                       </div>
+                   </form>
+               </div>
+       </div>
+       <div class="modal" id="register_form">
+           <div class="modal-dialog">
+               <form class="form-horizontal form" style="background-color: #3b6182">
+                   <h3 style="text-align: center; margin-top: -8px;">用户注册</h3>
+                   <button type="button" class="close" data-dismiss="modal" id="close_btn"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                   <div class="form-group">
+                       <label for="usernameReg" class="col-sm-2 control-label"><i class="fa fa-2x fa-user"></i></label>
+                       <div class="col-sm-10">
+                           <input type="text" class="form-control" id="usernameReg" placeholder="用户名">
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <label for="passwordReg" class="col-sm-2 control-label"><i class="fa fa-2x fa-lock"></i></label>
+                       <div class="col-sm-10">
+                           <input type="password" class="form-control" id="passwordReg" placeholder="密码">
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <label for="email" class="col-sm-2 control-label"><i class="fa fa-2x fa-file-o"></i></label>
+                       <div class="col-sm-10">
+                           <input type="email" class="form-control" id="email" placeholder="邮箱">
+                       </div>
+                   </div>
+                   <!--<div class="form-group">-->
+                       <!--<label  style="font-size: 21px;margin-left: 30px"><i class="fa fa-id-card"></i></label>-->
+                       <!--<input type="radio" value="0" style="display: inline;margin-left: 50px" name="usertype">&nbsp;管理员-->
+                       <!--<input type="radio" value="1" style="display: inline;margin-left: 40px" name="usertype">&nbsp;普通用户-->
+                   <!--</div>-->
+                   <div class="form-group">
+                       <label for="mobile" class="col-sm-2 control-label"><i class="fa fa-2x fa-mobile" style="font-size: 37px"></i></label>
+                       <div class="col-sm-10">
+                           <input type="text" class="form-control" id="mobile" placeholder="手机">
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-5">
+                           <button type="button" class="btn btn-block" id="submitReg">注册</button>
+                       </div>
+                       <div class="col-sm-5">
+                           <button type="button" class="btn btn-block" id="resetReg">重置</button>
+                       </div>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+</body>
+</html>

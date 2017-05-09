@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+    position: relative;
+}
+.content{
+    background: url("../images/index/login_background.png") no-repeat;
+    height: 943px;
+    background-size: 1921px 943px;
+    margin: 0;
+}
+.index_top{
+    height: 100px;
+    background: url("../images/index/input_background_image.png") no-repeat;
+    background-size: 1921px 100px;
+    border-bottom: 2px solid #14e6ff;
+}
+.index_nav ul li{
+    font-size: 18px;
+    border: 1px solid #13f5ff;
+    border-radius: 2px;
+    background-color: #4d81af;
+}
+.nav_text{
+    color: #000000;
+    font-family:新宋体;
+    font-size: 20px;
+}
+.index_title{
+    color: #14e6ff;
+    font-family:楷体;
+    font-size: 45px;
+}
+#logo_img{
+    width:80px;
+    height: 80px;
+    background: url("../images/index/logo2.png") no-repeat;
+    background-size: 80px 80px;
+}
+.index_nav{
+    margin-top: 10px;
+}
+#location{
+    color: #ffffff;
+}
+#welcome{
+    font-size: 16px;
+    color: white;
+}
+#userIcon,#signOutIcon{
+    font-size: 40px;
+    color: #00b3ee;
+    cursor: pointer;
+}
+#userIcon:hover{
+    color: #13f5ff;
+}
+#signOutIcon:hover{
+    color: #13f5ff;
+}
+.index_middle{
+    margin-top: 8px;
+    border: 1px solid #00B7FF;
+    border-radius: 3px;
+    background-color: #000000;
+    width: 1880px;
+    height: 800px;
+}
+.index_middle_head{
+    height: 60px;
+    border-bottom: 1px solid #00B7FF;
+    padding-left: 30px;
+}
+#create,#refresh,#delete{
+    width: 80px;
+    height: 35px;
+    background-color: #4d81af;
+    margin-top: 13px;
+    margin-left: 20px;
+    color: #000000;
+    font-size: 16px;
+}
+#create:hover{
+     background-color: #ffffff;
+ }
+#refresh:hover{
+    background-color: #ffffff;
+}
+#delete:hover{
+    background-color: #ffffff;
+}
+#search_condition{
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    margin-left: -4px;
+}
+#search_text{
+    width: 200px;
+    height: 30px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px ;
+}
+#search_form{
+    margin-top: 15px;
+}
+#search_btn{
+    margin-left: 15px;
+}
+.table_wap{
+    color: #14dbf2;
+}
+#table{
+    color: #99cee7;
+}
