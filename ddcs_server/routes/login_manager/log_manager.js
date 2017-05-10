@@ -23,35 +23,40 @@ exports.login=function (jsonData,callback) {
     }
 
     var sqlText = "select * from tbl_user where username=$1 and password=$2;";
-    var sqlValue = [jsonData.username,jsonData.password];
-    _dbopt.querySql(sqlText,sqlValue,function (err,count,result) {
+    var sqlValue = [jsonData.data.name,jsonData.data.pwd];
+    _dbOpt.querySql(sqlText,sqlValue,function (err,count,result) {
         if(err){
             rtRes.desc = err.detail;
-            callback(err);
+            callback(JSON.stringify(rtRes));
             return;
         }else if(count == 0){
             rtRes.desc = "用户名或密码错误，请重新输入！";
-            callback(rtRes);
+            callback(JSON.stringify(rtRes));
             return;
         }else {
-            var userData = {}
-            var sessionID = userOnline.getInstance().buildId();
-            userData.id = MD5.createmd5(sessionID);
-            userData.name = result[0].username;
-            userData.role = result[0].usertype;
-            var optTime = Math.floor((new Date().getDate())/1000);
-            userData.lastOptTime = optTime.toString();
-            userData.optSite = "";
-            userOnline.getInstance().regOnlineUser(userData,function (flag) {
-                if(flag){
-                    rtRes.rstcode = "success";
-                    rtRes.data.username = result[0].username;
-                    rtRes.data.role = result[0].usertype;
-                }else {
-                    rtRes.desc = "登录失败！"
-                };
-                callback(rtRes);
-            });
+            // var userData = {}
+            // var sessionID = userOnline.getInstance().buildId();
+            // userData.id = MD5.createmd5(sessionID);
+            // userData.name = result[0].username;
+            // userData.role = result[0].usertype;
+            // var optTime = Math.floor((new Date().getTime())/1000);
+            // userData.lastOptTime = optTime.toString();
+            // userData.optSite = "";
+            // userOnline.getInstance().regOnlineUser(userData,function (flag) {
+            //     if(flag){
+            //         rtRes.desc = "登录失败！"
+            //     }else {
+            //         rtRes.rstcode = "success";
+            //         rtRes.data.username = result[0].username;
+            //         rtRes.data.role = result[0].usertype;
+            //         rtRes.data.userhandle = userData.id;
+            //     };
+            //     callback(JSON.stringify(rtRes));
+            // });
+            rtRes.rstcode = "success";
+            rtRes.data.username = result[0].username;
+            rtRes.data.role = result[0].usertype;
+            callback(JSON.stringify(rtRes));
         };
     });
 };

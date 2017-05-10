@@ -47,16 +47,17 @@ router.post("/",function (req,res,next) {
     var method = req.method;
     var url = req.baseUrl;
     var postData = req.body.postData;
+    var jsonData =JSON.parse(postData)
+    console.log("postData:"+postData)
     switch (url){
         case "/login":{
-            logMgr.login(postData,callback);
+            logMgr.login(jsonData,callback);
         };
         case "/logout":{
-            logMgr.logout(postData,callback);
+            logMgr.logout(jsonData,callback);
         };
         case "/user":{
-            console.log("user:"+postData)
-            userMgr.triggerFunction(postData,callback)
+            userMgr.triggerFunction(jsonData,callback)
         }
     }
 });

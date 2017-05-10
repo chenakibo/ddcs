@@ -20,16 +20,16 @@ function triggerFunction(jsonData,callback) {
     if (typeof callback != "function"){
         return;
     }
-    var mainRequest = jsonData.mainRequest;
+    var mainRequest = jsonData.request.mainRequest;
     var operFunc = userOperFunc[mainRequest];
     var rtRes = {
         rstcode:"error",
         desc:"",
         data:{}
     };
-    if(typeof procFunc != "function")
+    if(typeof operFunc != "function")
     {
-        callback(rtRes);
+        callback(JSON.stringify(rtRes));
     }
     else
     {
@@ -43,28 +43,30 @@ function createUser(jsonData,callback) {
         return;
     };
 
-    var rstJson = {
+    var rtRes = {
         rstcode:"error",
         desc:"",
         data:""
     };
-    jsonData.createtime = api.formatDate(new Date());
-    jsonData.lastmodtime = api.formatDate(new Date());
-    userDao.getInstance().createUserMgr(jsonData,function (error) {
+    jsonData.data.createtime = api.formatDate(new Date());
+    jsonData.data.lastmodtime = api.formatDate(new Date());
+    var dataInfo = jsonData.data;
+    userDao.getInstance().createUserMgr(dataInfo,function (error) {
         if(error)
         {
-            console.log("[execSql adduser]:" + error.detail);
+            console.log("[execSql adduser]:" + error.detail+"--errorCode:"+error.code+":errorConstraint:"+error.constraint);
             if(error.code == '23505' && error.constraint == 'tbl_user_pkey'){
-                rstJson.desc = "该用户已存在！";
+                rtRes.desc = "该用户已存在！";
             }else{
-                rstJson.desc = "添加失败！";
+                rtRes.desc = "添加失败！";
             };
+            callback(JSON.stringify(rtRes));
         }
         else
         {
-            rstJson.rstcode = "success";
+            rtRes.rstcode = "success";
+            callback(JSON.stringify(rtRes));
         };
-        callback(rstJson);
     })
 };
 function modifyUser() {

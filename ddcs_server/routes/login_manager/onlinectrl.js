@@ -132,9 +132,9 @@ var onlineMgr = (function()
                     value[2] = user.role;
                     value[3] = user.lastOptTime;
                     value[4] = user.optSite;
-                    _dbOpt.execSql(sql,value,function(rst)
+                    _dbOpt.execSql(sql,value,function(err)
                     {
-                        if(rst)
+                        if(err)
                         {
                             callback(true);
                             return;

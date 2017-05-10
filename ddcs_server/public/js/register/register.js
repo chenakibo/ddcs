@@ -42,8 +42,8 @@ function register()
             "lastmodtime":""
         },
     };
-    var username = $("#username").val();
-    var pwd = $("#password").val();
+    var username = $("#usernameReg").val();
+    var pwd = $("#passwordReg").val();
     var email = $("#email").val();
     var usertype = "1";
     var mobile = $("#mobile").val();
@@ -67,7 +67,7 @@ function dealWithRegisterData(retJson)
     {
         uxAlert("注册成功！")
     }else{
-        uxAlert("您输入的信息有误，请重新输入！");
+        uxAlert(retjsonStr.desc);
     }
 }
 /*

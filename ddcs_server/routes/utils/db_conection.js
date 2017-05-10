@@ -51,12 +51,15 @@ function querySql(sqlText, sqlValue, callback)
     }
     dbPool.connect(function(isErr, client, done) {
         if (isErr) {
+            done();
             callback(isErr);
             return;
         }
         client.query(sqlText, sqlValue, function(isErr, results){
-            done();
+            console.log("============queryResult:"+JSON.stringify(results.rows))
+            // done();
             if (isErr) {
+                done();
                 callback(isErr);
                 console.log("[query_error]:" + isErr);
                 return;
@@ -73,6 +76,7 @@ function execSql(sqlText, sqlValue, callback)
     }
     dbPool.connect(function(isErr, client, done) {
         if (isErr) {
+            done();
             callback(isErr);
             return;
         }
@@ -141,3 +145,10 @@ function deleteAllDataOfTables(){
     }
 }
 //deleteAllDataOfTables();
+if(1){
+    var sql = "select * from tbl_user;"
+    var value = [];
+    querySql(sql,value,function (err,count,ret) {
+        console.log(ret)
+    })
+}

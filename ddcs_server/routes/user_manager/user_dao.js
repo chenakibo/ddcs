@@ -25,27 +25,24 @@ var userMgr=(function() {
     };
 })();
 module.exports=userMgr;
-function createUserMgr(jsonData,callback) {
+function createUserMgr(dataInfo,callback) {
     if(typeof callback != "function"){
         return;
     };
+    console.log("dataInfo:"+dataInfo)
     var sqlText = "INSERT INTO tbl_user(username,password,email,usertype,mobile,createtime,lastmodtime) " +
         "VALUES($1,$2,$3,$4,$5,$6,$7);";
     var sqlValue = [
-        jsonData.username,
-        jsonData.password,
-        jsonData.email,
-        jsonData.usertype,
-        jsonData.mobile,
-        jsonData.createtime,
-        jsonData.lastmodtime
+        dataInfo.name,
+        dataInfo.pwd,
+        dataInfo.email,
+        dataInfo.usertype,
+        dataInfo.mobile,
+        dataInfo.createtime,
+        dataInfo.lastmodtime
     ];
     _dbOpt.execSql(sqlText,sqlValue,function (err,rst) {
-        if(err){
-            callback(err);
-            return;
-        };
-        return;
+        callback(err);
     })
 };
 function modifyUserMgr() {
