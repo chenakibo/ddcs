@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory" value="spring"/><!-- 指出struts交给spring进行管理 -->
+	<package name="basicstruts2" extends="struts-default" namespace="/">
+	    <!-- 注册拦截器 -->
+	    <interceptors>
+	          <interceptor name="user_interceptor" class="com.imooc.web.interceptor.UserInterceptor"></interceptor>
+	    </interceptors>
+	     <!-- 配置全局的结果集 -->  
+	    <global-results> 
+	      <result name="login">/login.jsp</result> 
+	    </global-results>  
+		<!-- 需要进行权限控制的页面访问 -->
+		<action name="page_*_*">
+			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>
+			<result name="login">login.jsp</result>
+
+		</action>
+		<!-- 配置UserAction -->
+		<action name="userAction_*" class="userAction" method="{1}">
+		    <result name="register">register.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="home" type="redirectAction">page_common_index</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="user_interceptor"></interceptor-ref>
+		</action>
+		<!-- 配置LoginAction -->
+		<action name="loginAction_*" class="loginAction" method="{1}">
+		     <result name="login">/login.jsp</result>
+			 <result name="home" type="redirectAction">page_common_index</result>
+		</action>
+		<!-- 配置staffAction -->
+		<action name="staffAction_*" class="staffAction" method="{1}">
+		     <result name="list">/WEB-INF/pages/base/staff.jsp</result>
+		</action>
+		<!-- 配置regionAction -->
+		<action name="regionAction_*" class="regionAction" method="{1}">
+		      <result name="list">/WEB-INF/pages/base/region.jsp</result>
+		</action>
+		<!-- 配置subareaActiion -->
+		<action name="subareaAction_*" class="subareaAction" method="{1}">
+		      <result name="list">/WEB-INF/pages/base/subarea.jsp</result>
+		</action>
+		<!-- 配置subareaActiion -->
+		<action name="decidedzoneAction_*" class="decidedzoneAction" method="{1}">
+		      <result name="list">/WEB-INF/pages/base/decidedzone.jsp</result>
+		</action>
+	</package>
+</struts>
