@@ -9,8 +9,19 @@ $(function () {
     $("#loginUser").html(curUserName);
     $("#loginRole").html( curUserRole== 0?"管理员":"普通用户");
 
+    /*
+     * 搜索框
+     * */
+    $("#ss").searchbox({
+        menu:"#mm",
+        prompt:"请输入值"
+    });
+
     checkUserLogin();
 
+    /*
+    * 检查是否登录
+    * */
     function checkUserLogin() {
         if(window.sessionStorage.curUserName == undefined || window.sessionStorage.curUserRole == undefined){
             uxAlert("您还未登录，请先登录！");
