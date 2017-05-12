@@ -134,14 +134,14 @@ function deleteAllDataOfTables(){
     var sqlText = "";
     var sqlValue = [];
 
-    var tables = ["tbl_siteinfo","tbl_instance","tbl_dfslist","tbl_dirlist","tbl_mrclist","tbl_osdlist"];
+    var tables = ["tbl_site","tbl_user","tbl_hostinfo"];
 
     for(var i=0;i<tables.length;i++){
-        sqlText = "delete from " + tables[i] + ";"
+        sqlText = "drop table " + tables[i] + ";"
         dbOpt.execSql(sqlText,sqlValue,function(isErr){if(isErr){console.log("delete error!");}});
     }
 }
-//deleteAllDataOfTables();
+// deleteAllDataOfTables();
 // if(1){
 //     var sql = "select * from tbl_user;"
 //     var value = [];

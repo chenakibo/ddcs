@@ -36,8 +36,8 @@ function checkExist(error,regcount,rst)
 {
     if(!error)
     {
-        // var tableCount = Number(rst[0].count);
-        if(regcount <= 0)
+        var tableCount = Number(rst[0].count);
+        if(tableCount <= 0)
         {
             createTable(fileNameList[curIndex]);
             return;

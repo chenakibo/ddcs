@@ -6,6 +6,11 @@ var net = require("net");
 var client;
 
 function connect(jsonData,callback) {
+
+    if(typeof callback != "function"){
+        return;
+    }
+
     if(client == undefined){
         client = new net.Socket();
     };
@@ -14,7 +19,6 @@ function connect(jsonData,callback) {
     * */
     client.connect(jsonData.port,jsonData.ip,function () {
         client.write(jsonData.data);
-        client.end();
     });
 
     client.on('end', function ()
