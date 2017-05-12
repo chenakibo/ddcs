@@ -7,7 +7,8 @@
 var express = require("express");
 var router = express.Router();
 var logMgr = require("./login_manager/log_manager");
-var userMgr = require("./user_manager/user_service")
+var userMgr = require("./user_manager/user_service");
+var siteMgr = require("./site_manager/site_service");
 
 
 router.post("/",function (req,res,next) {
@@ -27,9 +28,12 @@ router.post("/",function (req,res,next) {
 
         if(typeof retJsonData != "object")
         {
+            // res.setHeader( {'Content-Type': 'text/plain'})
             res.writeHead(200, {"Content-Type" : "text/html"});
+            // res.setHeader("Content-Type" , "text/html")
             res.write(retJsonData);
             res.end();
+            return
         }
         else
         {
@@ -41,6 +45,7 @@ router.post("/",function (req,res,next) {
             res.writeHead(501, {"Content-Type" : "text/html"});
             res.write(JSON.stringify(rtRes));
             res.end();
+            return
         }
     }
 
@@ -52,12 +57,19 @@ router.post("/",function (req,res,next) {
     switch (url){
         case "/login":{
             logMgr.login(jsonData,callback);
+            return;
         };
         case "/logout":{
             logMgr.logout(jsonData,callback);
+            return
         };
         case "/user":{
-            userMgr.triggerFunction(jsonData,callback)
+            userMgr.triggerFunction(jsonData,callback);
+            return
+        };
+        case "/site":{
+            siteMgr.triggerFunction(jsonData,callback);
+            return;
         }
     }
 });

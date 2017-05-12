@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/5/8.
  */
-var uxdb = require('uxdb');
+var pg = require('pg');
 var gPrivatePwd = "hn5sFyvrgH";
 var uxdbConfig = require('./../../webconfig.json').uxdb;
 var gPrivatePort = "5432";
@@ -16,7 +16,7 @@ var dbConfig = {
     reapIntervalMillis: uxdbConfig.reapIntervalMillis
 }
 
-var dbPool = new uxdb.Pool(dbConfig);
+var dbPool = new pg.Pool(dbConfig);
 
 /*  uxdb数据库操作类 */
 function webdbOpt()
@@ -51,15 +51,12 @@ function querySql(sqlText, sqlValue, callback)
     }
     dbPool.connect(function(isErr, client, done) {
         if (isErr) {
-            done();
             callback(isErr);
             return;
         }
         client.query(sqlText, sqlValue, function(isErr, results){
-            console.log("============queryResult:"+JSON.stringify(results.rows))
-            // done();
+            done();
             if (isErr) {
-                done();
                 callback(isErr);
                 console.log("[query_error]:" + isErr);
                 return;
@@ -145,10 +142,10 @@ function deleteAllDataOfTables(){
     }
 }
 //deleteAllDataOfTables();
-if(1){
-    var sql = "select * from tbl_user;"
-    var value = [];
-    querySql(sql,value,function (err,count,ret) {
-        console.log(ret)
-    })
-}
+// if(1){
+//     var sql = "select * from tbl_user;"
+//     var value = [];
+//     querySql(sql,value,function (err,count,ret) {
+//         console.log(ret)
+//     })
+// }

@@ -3,7 +3,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render("login");
+  // res.setHeader({"Content-Type":"text/html"});
+  // res.redirect("/public/pages/login.html");
+    res.render("login");
+  // res.end();
+  // return
 });
+
+router.get("/index",function (req,res,next) {
+    res.render("index");
+})
 
 module.exports = router;

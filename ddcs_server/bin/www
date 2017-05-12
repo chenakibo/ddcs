@@ -89,6 +89,7 @@ function initServer()
     app.set('port', port);
     // server = https.createServer(options, app);
     server = https.createServer(options, app);
+    // server = http.createServer(app)
 
     server.listen(port);
     server.on('error', onError);

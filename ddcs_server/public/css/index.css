@@ -46,7 +46,7 @@ body{
 }
 #welcome{
     font-size: 16px;
-    color: white;
+    color: #13f5ff;
 }
 #userIcon,#signOutIcon{
     font-size: 40px;

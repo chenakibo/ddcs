@@ -32,12 +32,13 @@ $(function () {
         if($("#checkcode").val() == ""){
             uxAlert("验证码不能为空！");
             return false;
-        }
+        }else
         if($("#checkcode").val().toUpperCase() != $("#codeImage").html().toUpperCase()){
             uxAlert("验证码输入错误！");
             return false;
-        };
-        return true;
+        }else{
+            return true;
+        }
     }
 
     /*
@@ -61,7 +62,7 @@ $(function () {
             var pwd = $("#password").val();
             jsonDataObj.data.name = username;
             jsonDataObj.data.pwd = hex_md5(pwd);
-            window.sessionStorage.ux_curUserPwd = pwd;
+            // window.sessionStorage.ux_curUserPwd = pwd;
             var jsonDataStr = JSON.stringify(jsonDataObj);
             login_Interface.ajaxRequest(false,jsonDataStr,dealWithLoginData);
         }
@@ -76,11 +77,12 @@ $(function () {
         if(retjsonStr.rstcode == "success")
         {
             window.sessionStorage.curUserRole = retjsonStr.data.role;//0:管理员，1:普通用户
-            window.sessionStorage.curUserName = retjsonStr.data.name; //用户名
-            window.sessionStorage.userHandle = retjsonStr.data.userhandle;//sessionID
-            window.location.href="/views/index.html";
+            window.sessionStorage.curUserName = retjsonStr.data.username; //用户名
+            // window.sessionStorage.userHandle = retjsonStr.data.userhandle;//sessionID
+            location.href="https://localhost:11111/index";
+            // uxAlert("你好："+retjsonStr.data.name)
         }else{
-            uxAlert("请输入正确的用户和密码！");
+            uxAlert(retjsonStr.desc);
         }
     }
 

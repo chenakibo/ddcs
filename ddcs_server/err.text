@@ -1,0 +1,1 @@
+Can\'t set headers after they are sent:一般是因为某个res.render,res.send,res.json前面没有return

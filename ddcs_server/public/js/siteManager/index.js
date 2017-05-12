@@ -2,51 +2,91 @@
  * Created by Administrator on 2017/5/4.
  */
 $(function () {
+
+    var curUserName = window.sessionStorage.curUserName;
+    var curUserRole = window.sessionStorage.curUserRole;
+
+    $("#loginUser").html(curUserName);
+    $("#loginRole").html( curUserRole== 0?"管理员":"普通用户");
+
+    checkUserLogin();
+
+    function checkUserLogin() {
+        if(window.sessionStorage.curUserName == undefined || window.sessionStorage.curUserRole == undefined){
+            uxAlert("您还未登录，请先登录！");
+            setTimeout(function () {
+                location.href = "https://localhost:11111/"
+            },3000)
+
+        }
+    }
+
     /***************************初始化站点列表表格********************/
     function initSiteList()
     {
-        var par = [[{field: 'site_radio' , radio: true ,align: 'center' },
-            {field: 'site_number' ,title: '序&nbsp;&nbsp;&nbsp;&nbsp;号' ,align: 'center',formatter:function (index) {
-                return index++;
-            } },
-            {field: 'site_name' ,title: '站点名称' ,align: 'center' ,
-                // formatter:function(value,row,siteManager){
-                // var text;
-                // if(currentRole == 0)
-                // {
-                //     text = '<a href="#" data-type="text" data-pk="1" data-placement="right" class="editable editable-click editable-empty"> '+ row.site_name +'</a>';
-                // }else{
-                //     text = row.site_name ;
-                // }
-                // return "111";
-            // }
+        var par = [[
+            {
+                field: 'site_radio' ,
+                checkbox: true ,
+                align: 'center'
             },
-            {field: 'site_ID' ,title: '站点ID' ,align: 'center' },
-            // {field: 'site_state' , title: '运行状态' ,align: 'center' ,formatter:function(value,row,siteManager){
-            //     if(row.site_state == 1) {
-            //         var discon = '<a title = "运行">' + '<button class = "run-btn"></button>' + '</a>';
-            //         return discon;
-            //     }else if(row.instance_state == 2){
-            //         var constr = '<a title = "停止">' + '<button class = "stop-btn"></button>' + '</a>';
-            //         return constr;
-            //     }else{
-            //         var err = '<a title = "故障">' + '<button class = "error-btn"></button>' + '</a>';
-            //         return err;
-            //     }
-            // }},
-            // {field: 'creat_time' , title: '创建时间',align: 'center' },
-            // {field: 'instance_type' , title: '类&nbsp;&nbsp;&nbsp;&nbsp;型' ,align: 'center' },
-            // {field: 'db_version' , title: '数据库版本' ,align: 'center' },
-            {field: 'site_operate' , title: '操&nbsp;&nbsp作' ,align: 'center' , formatter:function(value,row,index){
-                // var par = row.site_name + "," + row.site_type + ","  + row.site_ID + "," + row.cluster_path + "," + row.DFSId ;
-                // var constr;
-                // if(row.site_state == 1 || row.site_state == 2)
-                // {
-                //     constr = '<a title = "配置">' + '<button class = "site-setupImg" onclick = "getInstanceOper(\'' + par + '\')"' + '></button>' + '</a>';
-                // }else{
-                //     constr = '<a title = "配置">' + '<button class = "site-no-operImg"' + '></button>' + '</a>';
-                // }
-                // return constr;
+            {
+                field: 'site_number' ,
+                title: '序&nbsp;&nbsp;&nbsp;&nbsp;号' ,
+                align: 'center',
+                formatter:function (value,row,index) {
+                    return index+1;
+                }
+            },
+            {
+                field: 'site_ID' ,
+                title: '站点ID' ,
+                align: 'center'
+            },
+            {
+                field: 'site_name' ,
+                title: '站点名称' ,
+                align: 'center'
+            },
+            {
+                field: 'site_IP' ,
+                title: '站点IP' ,
+                align: 'center'
+            },
+            {
+                field: 'site_port' ,
+                title: '端口' ,
+                align: 'center'
+            },
+            {
+                field: 'site_state' ,
+                title: '运行状态' ,
+                align: 'center' ,
+                formatter:function(value,row,siteManager){
+                if(row.site_state == 1) {
+                    var discon = '<i title="运行" class="fa fa-circle fa-spin fa-fw" style="color: #14e6ff"></i>'
+                    return discon;
+                }else if(row.instance_state == 2){
+                    var constr = '<i title="停止" class="fa fa-circle fa-fw" style="color: #737676"></i>';
+                    return constr;
+                }else{
+                    var err = '<i title="故障" class="fa fa-circle fa-fw" style="color: #ce642b"></i>';
+                    return err;
+                }
+            }},
+            {
+                field: 'site_operate' ,
+                title: '操&nbsp;&nbsp作' ,
+                align: 'center' ,
+                formatter:function(value,row,index){
+                    var icon;
+                   if(curUserRole == "1"){
+                        icon= '<i title="操作" class="fa fa-cog fa-spin fa-fw" style="color: #ce642b;cursor: pointer"></i>';
+                        return icon;
+                   }else {
+                       icon= '<i title="操作" class="fa fa-cog fa-spin fa-fw" style="color: #ce642b;cursor: pointer;" enabled="false"></i>';
+                       return icon;
+                   }
             }}
         ]];
         $('#table').bootstrapTable({
