@@ -101,7 +101,7 @@ function connectUxdb(callback){
     }
     var dbname = "uxdb";
     var conStr = "uxdb://" + dbConfig.user + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/" + dbname;
-    var client = new uxdb.Client(conStr);
+    var client = new pg.Client(conStr);
     client.connect(function(isErr) {
         callback(isErr);
         client.end();
@@ -113,7 +113,7 @@ function createWebdb(callback){
     }
     var dbname = "uxdb";
     var conStr = "uxdb://" + dbConfig.user + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/" + dbname;
-    var client = new uxdb.Client(conStr);
+    var client = new pg.Client(conStr);
     client.connect(function(isErr,client,done) {
         if (isErr) {
             callback(isErr);
@@ -134,7 +134,7 @@ function deleteAllDataOfTables(){
     var sqlText = "";
     var sqlValue = [];
 
-    var tables = ["tbl_site","tbl_user","tbl_hostinfo"];
+    var tables = ["tbl_site","tbl_user","tbl_hostinfo","tbl_hostconfig",];
 
     for(var i=0;i<tables.length;i++){
         sqlText = "drop table " + tables[i] + ";"

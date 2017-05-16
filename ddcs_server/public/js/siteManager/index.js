@@ -9,14 +9,6 @@ $(function () {
     $("#loginUser").html(curUserName);
     $("#loginRole").html( curUserRole== 0?"管理员":"普通用户");
 
-    /*
-     * 搜索框
-     * */
-    $("#ss").searchbox({
-        menu:"#mm",
-        prompt:"请输入值"
-    });
-
     checkUserLogin();
 
     /*

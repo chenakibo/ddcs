@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>分布式数据采集系统</title>
+    <title>数据采集</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +9,24 @@
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/collect.css">
     <link rel="stylesheet" href="../public/libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../public/libs/jAlert/jAlert-v4.css">
     <link rel="stylesheet" href="../public/libs/bootstrap-table/dist/bootstrap-table.min.css">
-    <link rel="stylesheet" href="../public/libs/jquery-easyui/themes/default/easyui.css">
-    <link rel="stylesheet" href="../public/libs/jquery-easyui/themes/icon.css">
     <script src="../public/libs/jquery/jquery.min.js"></script>
     <script src="../public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../public/libs/jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
-    <script src="../public/libs/jquery-easyui/jquery.easyui.min.js"></script>
     <script src="../public/libs/jAlert/jAlert-v4.min.js"></script>
     <script src="../public/libs/jAlert/jAlert-functions.min.js"></script>
     <script src="../public/libs/bootstrap-table/dist/bootstrap-table.js"></script>
     <script src="../public/libs/bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
     <script src="../public/js/utils/checkcode.js"></script>
     <script src="../public/js/utils/ux_md5.js"></script>
+    <script src="../public/libs/Chart/js/Chart-1.0.1-beta.4.js"></script>
     <script src="../public/js/utils/serverconfig.js"></script>
     <script src="../public/js/utils/alertMessage.js"></script>
-    <script src="../public/js/siteManager/index.js"></script>
+    <!--<script src="../public/js/siteManager/index.js"></script>-->
+    <script src="../public/js/collectDatabase/collect.js"></script>
 </head>
 <body>
 <div class="container-fluid content">
@@ -54,18 +52,18 @@
                 <span class="index_title">分布式数据采集系统</span>
             </div>
             <div class="row" id="location">
-                所在位置:<span>站点管理</span>
+                所在位置:<span>数据采集</span>
             </div>
         </div>
         <div class="col-md-2" style="margin-top: 30px">
-           <div class="col-md-6" id="welcome">
+            <div class="col-md-6" id="welcome">
                 <div class="row">
                     欢迎您:<span id="loginUser"></span>
                 </div>
                 <div class="row">
                     角&nbsp;&nbsp;&nbsp;&nbsp;色:<span id="loginRole">管理员</span>
                 </div>
-           </div>
+            </div>
             <div class="col-md-3">
                 <i class="fa fa-2x fa-user" id="userIcon"></i>
             </div>
@@ -76,32 +74,41 @@
     </div>
     <div class="row ">
         <div class="container-fluid index_middle">
-            <div class="row index_middle_head">
-                <div class="col-md-6">
-                    <button type="button" class="btn btn-default" id="create">
-                        <i class="fa fa-pencil"></i>新建</button>
-                    <button type="button" class="btn btn-default" id="refresh">
-                        <i class="fa fa-refresh"></i>刷新</button>
-                    <button type="button" class="btn btn-default" id="delete">
-                        <i class="fa fa-close"></i>删除</button>
+            <div class="col-md-1 index_middle_nav">
+                <div class="row">
+                    <h3 class="h3" id="h3">运行站点</h3>
                 </div>
-                <div class="col-md-offset-3 col-md-3">
-                    <form class="form-inline" id="search_form">
-                        <input type="text" id="search_text">
-                        <select id="search_condition">
-                            <option>id</option>
-                            <option>name</option>
-                        </select>
-                        <button type="button" class="btn btn-default" id="search_btn">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-10">
+                        <table id="table">
+                            <tr>
+                                <th>序号</th>
+                                <th>名称</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>jj</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>kk</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="row table_wap">
-                <table id="table">
-
-                </table>
+            <div class="col-md-11 index_middle_chart">
+                <div class="col-md-3 hostInfo_box">
+                    <h4 id="h4">主机信息</h4>
+                    <ul id="hostInfo">
+                        <li>主机名&nbsp;:&nbsp;<span>chenkaibo</span></li>
+                        <li>主机ip&nbsp;:&nbsp;<span>12355</span></li>
+                        <li>主机port&nbsp;:&nbsp;<span>125522</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-9 chart-box">
+                    <canvas id="myChart" width="1200" height="750"></canvas>
+                </div>
             </div>
         </div>
     </div>

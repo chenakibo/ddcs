@@ -15,7 +15,7 @@ var options = {
     key: fs.readFileSync('../privatekey.pem'),
     cert: fs.readFileSync('../certificate.pem')
 };
-
+var listenserver = require("../routes/communicate/server");
 /**
  * Listen on provided port, on all network interfaces.
  */

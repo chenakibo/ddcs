@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+    position: relative;
+}
+.content{
+    background: url("../images/index/login_background.png") no-repeat;
+    height: 943px;
+    background-size: 1921px 943px;
+    margin: 0;
+}
+.index_top{
+    height: 100px;
+    background: url("../images/index/input_background_image.png") no-repeat;
+    background-size: 1921px 100px;
+    border-bottom: 2px solid #14e6ff;
+}
+.index_nav ul li{
+    font-size: 18px;
+    border: 1px solid #13f5ff;
+    border-radius: 2px;
+    background-color: #4d81af;
+}
+.nav_text{
+    color: #000000;
+    font-family:新宋体;
+    font-size: 20px;
+}
+.index_title{
+    color: #14e6ff;
+    font-family:楷体;
+    font-size: 45px;
+}
+#logo_img{
+    width:80px;
+    height: 80px;
+    background: url("../images/index/logo2.png") no-repeat;
+    background-size: 80px 80px;
+}
+.index_nav{
+    margin-top: 10px;
+}
+#location{
+    color: #ffffff;
+}
+#welcome{
+    font-size: 16px;
+    color: #13f5ff;
+}
+#userIcon,#signOutIcon{
+    font-size: 40px;
+    color: #00b3ee;
+    cursor: pointer;
+}
+#userIcon:hover{
+    color: #13f5ff;
+}
+#signOutIcon:hover{
+    color: #13f5ff;
+}
+.index_middle{
+    margin-top: 8px;
+    border: 1px solid #00B7FF;
+    border-radius: 3px;
+    background-color: #000000;
+    width: 1880px;
+    height: 800px;
+}
+.index_middle_nav{
+    height: 760px;
+    border: 1px solid #13f5ff;
+    margin-top:15px;
+    border-radius: 10px;
+}
+#h3,#h4{
+    color: #00b3ee;
+    margin-left: 5px;
+}
+#table{
+    color: #2aabd2;
+    font-size: 16px;
+}
+.index_middle_chart{
+    height: 760px;
+    border: 1px solid #13f5ff;
+    margin-top:15px;
+    border-radius: 10px;
+}
+#myChart{
+    color: #5577d0;
+}
+.hostInfo_box{
+    padding-top: 20px;
+}
+#hostInfo{
+    color: #4790c0;
+    font-size: 18px;
+}
+.chart-box{
+    height: 758px;
+    border-left: 1px solid #13f5ff;
+}
+#hostInfo li{
+    line-height: 50px;
+}

@@ -19,8 +19,7 @@
   },
   "server":
   {
-      "udpPort":5000,
-      "tcpPort":30600,
+      "tcpPort":5656,
       "totaltimeout":180000,
       "timeout":30000,
       "detectionTime":30000,

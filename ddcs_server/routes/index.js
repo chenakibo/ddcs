@@ -14,4 +14,7 @@ router.get("/index",function (req,res,next) {
     res.render("index");
 })
 
+router.get("/siteManager",function (req,res,next) {
+    res.render("siteManager")
+})
 module.exports = router;
