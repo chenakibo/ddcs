@@ -5,6 +5,7 @@ var siteDao = require("./site_dao");
 
 var siteOperFunc = {
     enumSiteList : enumSiteList,
+    deleteSite : deleteSite,
 };
 /*
 * 响应给页面的数据
@@ -41,7 +42,7 @@ function enumSiteList(jsonData,callback) {
         return;
     };
 
-    siteDao.getInstance().enumSiteList(jsonData,function (err,rst) {
+    siteDao.getInstance().enumSiteListMgr(jsonData,function (err,rst) {
         if(err){
             rtRes.desc = err.detail;
         }else {
@@ -50,5 +51,21 @@ function enumSiteList(jsonData,callback) {
         }
         callback(JSON.stringify(rtRes));
         return;
+    })
+};
+/*
+* 删除站点的业务层
+* */
+function deleteSite(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+    siteDao.getInstance().deleteSiteMgr(jsonData,function (err) {
+        if(err){
+            rtRes.desc = err.detail;
+        }else{
+            rtRes.rstcode = "success";
+        };
+        callback(JSON.stringify(rtRes));
     })
 }

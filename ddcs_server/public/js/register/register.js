@@ -13,6 +13,7 @@ $(function () {
     });
     $("#submitReg").click(function () {
         register();
+        $('#register_form').modal("hide")
     })
 });
 function main(){
@@ -29,7 +30,7 @@ function main(){
  */
 function register()
 {
-    var register_Interface = new registerAjaxInterface();  //登录请求接口
+    var register_Interface = new registerAjaxInterface();
     var jsonDataObj = {
         request :{"mainRequest":"createUser","subRequest":"","ssubRequest":""},
         "data" :{
@@ -73,7 +74,7 @@ function dealWithRegisterData(retJson)
 /*
  * 取消
  * */
-function cancel()
-{
-    window.location.replace("/views/siteManager.html");
-}
+// function cancel()
+// {
+//     window.location.replace("/views/siteManager.html");
+// }

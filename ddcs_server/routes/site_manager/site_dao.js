@@ -10,7 +10,8 @@ var siteMgr = (function () {
     var _inst;
     function siteMgrCtrl() {
         return{
-            enumSiteListMgr:enumSiteListMgr
+            enumSiteListMgr:enumSiteListMgr,
+            deleteSiteMgr:deleteSiteMgr,
         }
     };
     return{
@@ -37,5 +38,21 @@ function enumSiteListMgr(jsonData,callback) {
     var sqlValue = [];
     _dbOpt.querySql(sqlText,sqlValue,function (err, count, rst) {
           callback(err,rst);
+    })
+};
+/*
+* 删除站点的数据库操作
+* */
+function deleteSiteMgr(jsonData,callback) {
+
+    if(typeof callback != "function"){
+        return;
+    };
+
+    var sqlText = "delete from tbl_site where id=$1;";
+    var sqlValue = [jsonData.data.id];
+
+    _dbOpt.execSql(sqlText,sqlValue,function (err) {
+        callback(err);
     })
 }

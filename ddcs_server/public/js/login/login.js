@@ -5,7 +5,9 @@
 $(function () {
 
     main();
-    createCode($("#codeImage"))
+    createCode($("#codeImage"));
+    var login_ajaxInterface = new loginAjaxInterface();  //登录请求接口
+
     $("#register").click(function () {
         $('#register_form').modal()
     });
@@ -53,7 +55,6 @@ $(function () {
         var flag = checkCode();
 
         if(flag){
-            var login_Interface = new loginAjaxInterface();  //登录请求接口
             var jsonDataObj = {
                 "data" :{"name":"","pwd":""},
                 "oper" : "登录系统"
@@ -64,7 +65,7 @@ $(function () {
             jsonDataObj.data.pwd = hex_md5(pwd);
             // window.sessionStorage.ux_curUserPwd = pwd;
             var jsonDataStr = JSON.stringify(jsonDataObj);
-            login_Interface.ajaxRequest(false,jsonDataStr,dealWithLoginData);
+            login_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithLoginData);
         }
     }
 

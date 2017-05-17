@@ -75,20 +75,20 @@ body{
 #create,#refresh,#delete{
     width: 80px;
     height: 35px;
-    background-color: #4d81af;
+    background-color: #fbffff;
     margin-top: 13px;
     margin-left: 20px;
     color: #000000;
     font-size: 16px;
 }
 #create:hover{
-     background-color: #ffffff;
+     background-color: #959595;
  }
 #refresh:hover{
-    background-color: #ffffff;
+    background-color: #959595;
 }
 #delete:hover{
-    background-color: #ffffff;
+    background-color: #959595;
 }
 #search_condition{
     width: 60px;
@@ -110,7 +110,12 @@ body{
 }
 .table_wap{
     color: #14dbf2;
+    /*width: 1880px;*/
+    /*height: 740px;*/
 }
 #table{
     color: #99cee7;
+}
+.rowStyle{
+    background-color: #062e48;
 }
