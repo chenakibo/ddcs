@@ -2,332 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e59b455-0b3a-4a9b-846d-10f9fa20971b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/siteManager/index_ajax.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/DONATORS.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/_config.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/bootstrap-table.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/bootstrap-table-locale-all.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/bootstrap-table-locale-all.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/bootstrap-table.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/bootstrap-table.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/bootstrap-table.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/bootstrap-table.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/accent-neutralise/bootstrap-table-accent-neutralise.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/angular/bootstrap-table-angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/angular/bootstrap-table-angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/click-edit-row/bootstrap-table-click-edit-row.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/click-edit-row/bootstrap-table-click-edit-row.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/click-edit-row/bootstrap-table-click-edit-row.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/cookie/bootstrap-table-cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/cookie/bootstrap-table-cookie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/copy-rows/bootstrap-table-copy-rows.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/copy-rows/bootstrap-table-copy-rows.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/editable/bootstrap-table-editable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/editable/bootstrap-table-editable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/filter/bootstrap-table-filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/filter/bootstrap-table-filter.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/flat-json/bootstrap-table-flat-json.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/flat-json/bootstrap-table-flat-json.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/group-by-v2/bootstrap-table-group-by.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/group-by-v2/bootstrap-table-group-by.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/group-by/bootstrap-table-group-by.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/group-by/bootstrap-table-group-by.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/group-by/bootstrap-table-group-by.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/i18n-enhance/bootstrap-table-i18n-enhance.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/key-events/bootstrap-table-key-events.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/key-events/bootstrap-table-key-events.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multi-column-toggle/bootstrap-table-multi-toggle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multi-column-toggle/bootstrap-table-multi-toggle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multiple-search/bootstrap-table-multiple-search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multiple-search/bootstrap-table-multiple-search.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multiple-sort/bootstrap-table-multiple-sort.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/multiple-sort/bootstrap-table-multiple-sort.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/natural-sorting/bootstrap-table-natural-sorting.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/natural-sorting/bootstrap-table-natural-sorting.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/print/bootstrap-table-print.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/print/bootstrap-table-print.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/resizable/bootstrap-table-resizable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/resizable/bootstrap-table-resizable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/select2-filter/bootstrap-table-select2-filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/select2-filter/bootstrap-table-select2-filter.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/sticky-header/bootstrap-table-sticky-header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/toolbar/bootstrap-table-toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/toolbar/bootstrap-table-toolbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/tree-column/bootstrap-table-tree-column.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/tree-column/bootstrap-table-tree-column.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/extensions/tree-column/bootstrap-table-tree-column.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-af-ZA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-af-ZA.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ar-SA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ar-SA.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ca-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ca-ES.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-cs-CZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-cs-CZ.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-da-DK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-da-DK.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-de-DE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-de-DE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-el-GR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-el-GR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-en-US.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-en-US.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-AR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-AR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-CL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-CL.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-CR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-CR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-ES.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-MX.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-MX.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-NI.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-NI.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-SP.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-es-SP.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-et-EE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-et-EE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-fa-IR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-fa-IR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-fr-BE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-fr-BE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-fr-FR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-fr-FR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-he-IL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-he-IL.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-hr-HR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-hr-HR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-hu-HU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-hu-HU.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-id-ID.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-id-ID.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-it-IT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-it-IT.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ja-JP.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ja-JP.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ka-GE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ka-GE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ko-KR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ko-KR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ms-MY.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ms-MY.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-nb-NO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-nb-NO.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-nl-NL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-nl-NL.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-pl-PL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-pl-PL.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-pt-BR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-pt-PT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-pt-PT.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ro-RO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ro-RO.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ru-RU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ru-RU.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-sk-SK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-sk-SK.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-sv-SE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-sv-SE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-th-TH.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-th-TH.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-tr-TR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-tr-TR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-uk-UA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-uk-UA.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ur-PK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-ur-PK.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-uz-Latn-UZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-uz-Latn-UZ.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-vi-VN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-vi-VN.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/dist/locale/bootstrap-table-zh-TW.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/bootstrap-table.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/bootstrap-table.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/accent-neutralise/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/accent-neutralise/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/angular/bootstrap-table-angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/auto-refresh/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/auto-refresh/bootstrap-table-auto-refresh.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/auto-refresh/bootstrap-table-auto-refresh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/auto-refresh/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/click-edit-row/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/click-edit-row/bootstrap-table-click-edit-row.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/click-edit-row/bootstrap-table-click-edit-row.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/cookie/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/cookie/bootstrap-table-cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/cookie/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/copy-rows/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/copy-rows/bootstrap-table-copy-rows.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/copy-rows/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/editable/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/editable/bootstrap-table-editable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/editable/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/export/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/export/bootstrap-table-export.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/export/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/filter-control/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/filter-control/bootstrap-table-filter-control.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/filter-control/bootstrap-table-filter-control.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/filter-control/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/filter/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/filter/bootstrap-table-filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/filter/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/flat-json/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/flat-json/bootstrap-table-flat-json.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/flat-json/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by-v2/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by-v2/bootstrap-table-group-by.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by-v2/bootstrap-table-group-by.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by-v2/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by/bootstrap-table-group-by.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by/bootstrap-table-group-by.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/group-by/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/i18n-enhance/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/i18n-enhance/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/key-events/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/key-events/bootstrap-table-key-events.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/key-events/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/mobile/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/mobile/bootstrap-table-mobile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/mobile/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multi-column-toggle/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multi-column-toggle/bootstrap-table-multi-toggle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multi-column-toggle/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-search/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-search/bootstrap-table-multiple-search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-search/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-selection-row/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-selection-row/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-sort/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-sort/bootstrap-table-multiple-sort.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/multiple-sort/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/natural-sorting/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/natural-sorting/bootstrap-table-natural-sorting.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/natural-sorting/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/print/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/print/bootstrap-table-print.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/reorder-columns/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/reorder-columns/bootstrap-table-reorder-columns.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/reorder-columns/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/reorder-rows/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/reorder-rows/bootstrap-table-reorder-rows.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/reorder-rows/bootstrap-table-reorder-rows.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/reorder-rows/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/resizable/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/resizable/bootstrap-table-resizable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/resizable/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/select2-filter/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/select2-filter/bootstrap-table-select2-filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/select2-filter/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/sticky-header/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/sticky-header/bootstrap-table-sticky-header.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/sticky-header/bootstrap-table-sticky-header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/sticky-header/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/toolbar/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/toolbar/bootstrap-table-toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/toolbar/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/tree-column/bootstrap-table-tree-column.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/tree-column/bootstrap-table-tree-column.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/tree-column/bootstrap-table-tree-column.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/tree-column/extension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/extensions/tree-column/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-af-ZA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ar-SA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ca-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-cs-CZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-da-DK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-de-DE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-el-GR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-en-US.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-en-US.js.template" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-es-AR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-es-CL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-es-CR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-es-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-es-MX.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-es-NI.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-es-SP.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-et-EE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-fa-IR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-fr-BE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-fr-FR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-he-IL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-hr-HR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-hu-HU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-id-ID.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-it-IT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ja-JP.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ka-GE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ko-KR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ms-MY.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-nb-NO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-nl-NL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-pl-PL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-pt-PT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ro-RO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ru-RU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-sk-SK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-sv-SE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-th-TH.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-tr-TR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-uk-UA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-ur-PK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-uz-Latn-UZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-vi-VN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/bootstrap-table/src/locale/bootstrap-table-zh-TW.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/index.css" afterPath="$PROJECT_DIR$/public/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/login/login.js" afterPath="$PROJECT_DIR$/public/js/login/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/register/register.js" afterPath="$PROJECT_DIR$/public/js/register/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/siteManager/index.js" afterPath="$PROJECT_DIR$/public/js/siteManager/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/site_manager/site_dao.js" afterPath="$PROJECT_DIR$/routes/site_manager/site_dao.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/site_manager/site_service.js" afterPath="$PROJECT_DIR$/routes/site_manager/site_service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -350,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1200">
-              <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -366,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/siteManager/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
@@ -380,11 +55,33 @@
                 <element signature="e#3008#3535#0" expanded="false" />
                 <element signature="e#3160#3534#0" expanded="false" />
                 <element signature="e#3549#4165#0" expanded="false" />
+                <marker date="1495022136392" expanded="true" signature="63:6261" ph="{...}" />
+                <marker date="1495022136392" expanded="true" signature="2092:4751" ph="{...}" />
                 <marker date="1495022136392" expanded="true" signature="3289:3303" ph="..." />
                 <marker date="1495022136392" expanded="true" signature="3448:3462" ph="..." />
                 <marker date="1495022136392" expanded="true" signature="3875:3905" ph="..." />
                 <marker date="1495022136392" expanded="true" signature="4053:4084" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".bowerrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.bowerrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/libs/jquery/jquery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459">
+              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -404,16 +101,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
               <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="www" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/www">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -517,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/user_manager/user_dao.js" />
         <option value="$PROJECT_DIR$/routes/user_manager/user_service.js" />
         <option value="$PROJECT_DIR$/routes/login_manager/onlinectrl.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -568,6 +254,7 @@
         <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/routes/site_manager/site_service.js" />
         <option value="$PROJECT_DIR$/public/js/siteManager/index.js" />
+        <option value="$PROJECT_DIR$/.bowerrc" />
       </list>
     </option>
   </component>
@@ -712,6 +399,54 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jquery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ddcs_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ddcs_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ddcs_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ddcs_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -755,10 +490,10 @@
     <property name="javascript.nodejs.core.library.configured.version" value="4.2.3" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\Nodejs\node.exe" />
-    <property name="last_opened_file_path" value="F:/uxdb/uxdbweb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/libs/test/bootstrap-table/dist/bootstrap-table.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/bower.json" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/public/libs/test/bootstrap-table/dist/bootstrap-table.js" />
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
@@ -901,7 +636,7 @@
       <workItem from="1494746695315" duration="416000" />
       <workItem from="1494758926068" duration="5304000" />
       <workItem from="1494840432102" duration="5616000" />
-      <workItem from="1494912125979" duration="40964000" />
+      <workItem from="1494912125979" duration="41423000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.10">
       <created>1494417144848</created>
@@ -945,23 +680,30 @@
       <option name="project" value="LOCAL" />
       <updated>1494935050819</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modify 5.12">
+      <created>1495022177058</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1495022177058</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294237000" />
+    <option name="totallyTimeSpent" value="294696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21022129" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38950893" sideWeight="0.50421494" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29575893" sideWeight="0.49578503" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29575893" sideWeight="0.49578503" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23214285" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23214285" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16964285" sideWeight="0.49683878" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1179,13 +921,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/libs/Chart/bar-demo1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-526">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/libs/Chart/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1447,14 +1182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/jquery/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="762" column="4" lean-forward="false" selection-start-line="762" selection-start-column="4" selection-end-line="762" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1555,7 +1282,7 @@
     <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1200">
-          <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -1591,11 +1318,29 @@
             <element signature="e#3008#3535#0" expanded="false" />
             <element signature="e#3160#3534#0" expanded="false" />
             <element signature="e#3549#4165#0" expanded="false" />
+            <marker date="1495022136392" expanded="true" signature="63:6261" ph="{...}" />
+            <marker date="1495022136392" expanded="true" signature="2092:4751" ph="{...}" />
             <marker date="1495022136392" expanded="true" signature="3289:3303" ph="..." />
             <marker date="1495022136392" expanded="true" signature="3448:3462" ph="..." />
             <marker date="1495022136392" expanded="true" signature="3875:3905" ph="..." />
             <marker date="1495022136392" expanded="true" signature="4053:4084" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/libs/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
