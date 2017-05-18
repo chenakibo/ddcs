@@ -1,0 +1,16 @@
+Index: public/js/login/login.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- public/js/login/login.js	(revision 96f487615cff8a4f011901e00171c4583b95f64a)
++++ public/js/login/login.js	(revision )
+@@ -80,7 +80,7 @@
+             window.sessionStorage.userHandle = retjsonStr.data.userhandle;//sessionID
+             window.location.href="/views/index.html";
+         }else{
+-            uxAlert("请输入正确的用户和密码！");
++            uxAlert(retjsonStr.desc);
+         }
+     }
+ 
