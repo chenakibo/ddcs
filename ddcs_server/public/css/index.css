@@ -119,3 +119,23 @@ body{
 .rowStyle{
     background-color: #062e48;
 }
+.form{
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    color: #5cd3ff;
+    border: 2px solid #00b3ee;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 50px;
+    padding-left: 10px;
+}
+#username,#password,#email,#usertype,#mobile{
+    background-color: #acd6f0;
+}
+#close_btn{
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    color: #ffffff;
+}

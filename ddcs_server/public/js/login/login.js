@@ -52,8 +52,8 @@ $(function () {
         /*
          * 首先校验验证码
          * */
-        var flag = checkCode();
-
+        // var flag = checkCode();
+        var flag = true;
         if(flag){
             var jsonDataObj = {
                 "data" :{"name":"","pwd":""},

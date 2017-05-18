@@ -14,19 +14,23 @@ var api = require("../utils/api");
 var userOperFunc = {
     createUser : createUser,
     modifyUser : modifyUser,
-    deleteUser : deleteUser
+    deleteUser : deleteUser,
+    showUserInfo : showUserInfo,
 };
+
+var rtRes = {
+    rstcode:"error",
+    desc:"",
+    data:{}
+};
+
 function triggerFunction(jsonData,callback) {
     if (typeof callback != "function"){
         return;
     }
     var mainRequest = jsonData.request.mainRequest;
     var operFunc = userOperFunc[mainRequest];
-    var rtRes = {
-        rstcode:"error",
-        desc:"",
-        data:{}
-    };
+
     if(typeof operFunc != "function")
     {
         callback(JSON.stringify(rtRes));
@@ -43,15 +47,9 @@ function createUser(jsonData,callback) {
         return;
     };
 
-    var rtRes = {
-        rstcode:"error",
-        desc:"",
-        data:""
-    };
     jsonData.data.createtime = api.formatDate(new Date());
     jsonData.data.lastmodtime = api.formatDate(new Date());
-    var dataInfo = jsonData.data;
-    userDao.getInstance().createUserMgr(dataInfo,function (error) {
+    userDao.getInstance().createUserMgr(jsonData,function (error) {
         if(error)
         {
             console.log("[execSql adduser]:" + error.detail+"--errorCode:"+error.code+":errorConstraint:"+error.constraint);
@@ -74,4 +72,18 @@ function modifyUser() {
 };
 function deleteUser() {
     
+};
+function showUserInfo(jsonData,callback) {
+    if(typeof callback != "function"){
+        return
+    };
+    userDao.getInstance().showUserInfoMgr(jsonData,function (err,rst) {
+        if(err){
+            rtRes.desc = err.detail;
+        }else {
+            rtRes.rstcode = "success";
+            rtRes.data = rst;
+        };
+        callback(JSON.stringify(rtRes));
+    })
 }

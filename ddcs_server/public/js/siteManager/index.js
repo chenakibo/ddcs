@@ -6,6 +6,7 @@ $(function () {
     var curUserName = window.sessionStorage.curUserName;
     var curUserRole = window.sessionStorage.curUserRole;
     var index_ajaxInterface = new indexAjaxInterface();
+    var user_ajaxInterface = new userAjaxInterface();
 
     $("#loginUser").html(curUserName);
     $("#loginRole").html( curUserRole== 0?"管理员":"普通用户");
@@ -37,13 +38,33 @@ $(function () {
             }
         })
     });
-
+    $(".site_oper").click(function () {
+        uxConfirm("您确定删除这个站点吗？",function (flag) {
+            if(flag){
+                deleteSite();
+            }
+        })
+    });
     /*
     *查询站点信息的功能
     * */
     $("#search_btn").click(function () {
         querySite();
-    })
+    });
+    /*
+    * 刷新站点
+    * */
+    $("#refresh").click(function () {
+        getSiteList();
+    });
+
+    /*
+    * 显示用户信息
+    * */
+    $("#userIcon").click(function () {
+        showUserInfo();
+        $('#userInfo').modal();
+    });
     /*
     * 定时获取站点列表，间隔30秒
     * */
@@ -144,10 +165,10 @@ $(function () {
                 formatter:function(value,row,index){
                     var icon;
                    if(curUserRole == "0"){
-                       icon= '<i title="操作" class="fa fa-cog fa-spin fa-fw" style="color: #42c2ee;cursor: pointer"></i>';
+                       icon= '<i title="操作" class="fa fa-trash fa-fw site_oper" style="color: #ee9b84;cursor: pointer"></i>';
                         return icon;
                    }else {
-                       icon= '<i title="操作" class="fa fa-cog fa-fw" style="color: #737676;cursor: no-drop;" ></i>';
+                       icon= '<i title="操作" class="fa fa-trash fa-fw" style="color: #959595;cursor: no-drop;" ></i>';
                        return icon;
                    }
             }}
@@ -168,7 +189,7 @@ $(function () {
                 }
                 return {};
             },
-            clickToSelect:true
+            clickToSelect:true,
         });
     }
     // function listenTable()
@@ -205,8 +226,9 @@ $(function () {
         var retjsonStr = JSON.parse(retJson);
         if(retjsonStr.rstcode == "success")
         {
+            // $("#table").bootstrapTable("refresh");
             uxAlert("删除成功！");
-            $("#table").bootstrapTable("reload");
+            getSiteList();
         }else{
             uxAlert(retjsonStr.desc);
         }
@@ -218,11 +240,52 @@ $(function () {
     function querySite() {
         var condition = $("#search_condition").val();
         var searchText = $("#search_text").val();
+        if (searchText == ""){
+            uxAlert("搜索条件不能为空！");
+            return;
+        }
         var jsonDataObj = {
-            request :{"mainRequest":"deleteSite","subRequest":"","ssubRequest":""},
+            request :{"mainRequest":"querySite","subRequest":"","ssubRequest":""},
             "data" :{
-                id:site_id
+                condition:condition,
+                searchText:searchText
             },
         };
-    }
+        var jsonDataStr = JSON.stringify(jsonDataObj);
+        index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithQuerySiteData);
+    };
+    function dealWithQuerySiteData(jsonString) {
+        var retjsonData = JSON.parse(jsonString);
+        if(retjsonData.rstcode = "success"){
+            $("#table").bootstrapTable("load",retjsonData.data);
+        }else {
+            uxAlert(retjsonData.desc);
+        };
+    };
+    function showUserInfo() {
+        var jsonDataObj = {
+            request :{"mainRequest":"showUserInfo","subRequest":"","ssubRequest":""},
+            "data" :{
+                currUserName:curUserName,
+            },
+        };
+        var jsonDataStr = JSON.stringify(jsonDataObj);
+        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithShowUserInfoData)
+    };
+    function dealWithShowUserInfoData(jsonString) {
+        var retJsonData = JSON.parse(jsonString);
+        if(retJsonData.rstcode = "success"){
+            $("#username").html(retJsonData.data[0].username);
+            $("#password").html(retJsonData.data[0].password);
+            $("#email").html(retJsonData.data[0].email);
+            if(retJsonData.data[0].usertype == "0"){
+                $("#usertype").html("管理员");
+            }else{
+                $("#usertype").html("普通用户");
+            };
+            $("#mobile").html(retJsonData.data[0].mobile);
+        }else {
+            uxAlert(retJsonData.desc);
+        };
+    };
 })

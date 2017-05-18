@@ -12,6 +12,7 @@ var siteMgr = (function () {
         return{
             enumSiteListMgr:enumSiteListMgr,
             deleteSiteMgr:deleteSiteMgr,
+            querySiteMgr : querySiteMgr
         }
     };
     return{
@@ -54,5 +55,25 @@ function deleteSiteMgr(jsonData,callback) {
 
     _dbOpt.execSql(sqlText,sqlValue,function (err) {
         callback(err);
+    })
+};
+/*
+* 站点查询的数据库操作
+* */
+function querySiteMgr(jsonData,callback) {
+
+    if(typeof callback != "function"){
+        return;
+    };
+
+    var sqlText;
+    if(jsonData.data.condition == "id"){
+        sqlText = "select * from tbl_site where id like $1;"
+    }else{
+        sqlText = "select * from tbl_site where sitename like $1;"
+    };
+    var sqlValue = ["%"+jsonData.data.searchText+"%"];
+    _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
+        callback(err,rst);
     })
 }

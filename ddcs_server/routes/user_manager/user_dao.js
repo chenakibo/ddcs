@@ -12,7 +12,8 @@ var userMgr=(function() {
         return {
             createUserMgr:createUserMgr,
             modifyUserMgr:modifyUserMgr,
-            deleteUserMgr:deleteUserMgr
+            deleteUserMgr:deleteUserMgr,
+            showUserInfoMgr:showUserInfoMgr,
         };
     };
     return{
@@ -25,21 +26,20 @@ var userMgr=(function() {
     };
 })();
 module.exports=userMgr;
-function createUserMgr(dataInfo,callback) {
+function createUserMgr(jsonData,callback) {
     if(typeof callback != "function"){
         return;
     };
-    console.log("dataInfo:"+dataInfo)
     var sqlText = "INSERT INTO tbl_user(username,password,email,usertype,mobile,createtime,lastmodtime) " +
         "VALUES($1,$2,$3,$4,$5,$6,$7);";
     var sqlValue = [
-        dataInfo.name,
-        dataInfo.pwd,
-        dataInfo.email,
-        dataInfo.usertype,
-        dataInfo.mobile,
-        dataInfo.createtime,
-        dataInfo.lastmodtime
+        jsonData.data.name,
+        jsonData.data.pwd,
+        jsonData.data.email,
+        jsonData.data.usertype,
+        jsonData.data.mobile,
+        jsonData.data.createtime,
+        jsonData.data.lastmodtime
     ];
     _dbOpt.execSql(sqlText,sqlValue,function (err,rst) {
         callback(err);
@@ -50,4 +50,14 @@ function modifyUserMgr() {
 };
 function deleteUserMgr() {
     
+};
+function showUserInfoMgr(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+    var sqlText = "select * from tbl_user where username=$1;";
+    var sqlValue = [jsonData.data.currUserName];
+    _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
+        callback(err,rst);
+    })
 }
