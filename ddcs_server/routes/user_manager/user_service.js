@@ -12,8 +12,10 @@ var api = require("../utils/api");
 * 用于用户操作处理的函数
 * */
 var userOperFunc = {
+    enumUserList : enumUserList,
     createUser : createUser,
     modifyUser : modifyUser,
+    queryUser : queryUser,
     deleteUser : deleteUser,
     showUserInfo : showUserInfo,
 };
@@ -42,6 +44,27 @@ function triggerFunction(jsonData,callback) {
 }
 exports.triggerFunction = triggerFunction;
 
+/*
+* 获取用户列表
+* */
+function enumUserList(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+
+    userDao.getInstance().enumUserList(jsonData,function (err,rst) {
+        if(err){
+            rtRes.desc = err.detail;
+        }else {
+            rtRes.rstcode = "success";
+            rtRes.data = rst;
+        };
+        callback(JSON.stringify(rtRes));
+    })
+};
+/*
+* 创建的用户的service
+* */
 function createUser(jsonData,callback) {
     if (typeof callback != "function"){
         return;
@@ -70,8 +93,21 @@ function createUser(jsonData,callback) {
 function modifyUser() {
     
 };
-function deleteUser() {
-    
+/*
+* 删除用户信息
+* */
+function deleteUser(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+    userDao.getInstance().deleteUserMgr(jsonData,function (err) {
+        if(err){
+            rtRes.desc = err.detail;
+        }else {
+            rtRes.rstcode = "success";
+        };
+        callback(JSON.stringify(rtRes));
+    })
 };
 function showUserInfo(jsonData,callback) {
     if(typeof callback != "function"){

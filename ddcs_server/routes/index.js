@@ -12,9 +12,12 @@ router.get('/', function(req, res, next) {
 
 router.get("/index",function (req,res,next) {
     res.render("index");
-})
+});
 
-router.get("/siteManager",function (req,res,next) {
-    res.render("siteManager")
+router.get("/collect",function (req,res,next) {
+    res.render("collect");
+});
+router.get("/user",function (req,res,next) {
+    res.render("user");
 })
 module.exports = router;

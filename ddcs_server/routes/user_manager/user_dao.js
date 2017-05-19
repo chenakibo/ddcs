@@ -10,6 +10,7 @@ var userMgr=(function() {
     var _inst;
     function userMgrCtrl() {
         return {
+            enumUserListMgr:enumUserListMgr,
             createUserMgr:createUserMgr,
             modifyUserMgr:modifyUserMgr,
             deleteUserMgr:deleteUserMgr,
@@ -26,6 +27,25 @@ var userMgr=(function() {
     };
 })();
 module.exports=userMgr;
+
+/*
+* 获取用户列表的数据库操作
+* */
+function enumUserListMgr(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+
+    var sqlText = "select * from tbl_user;"
+    var sqlValue = [];
+
+    _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
+        callback(err,rst);
+    })
+}
+/*
+* 创建用户
+* */
 function createUserMgr(jsonData,callback) {
     if(typeof callback != "function"){
         return;
@@ -45,12 +65,28 @@ function createUserMgr(jsonData,callback) {
         callback(err);
     })
 };
+/*
+* 修改用户信息的数据库操作
+* */
 function modifyUserMgr() {
     
 };
-function deleteUserMgr() {
-    
+/*
+* 删除用户的数据库操作
+* */
+function deleteUserMgr(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+    var sqlText = "delete * from tbl_user where id=$1;";
+    var sqlValue = [jsonData.data.id];
+    _dbOpt.execSql(sqlText,sqlValue,function (err) {
+        callback(err);
+    })
 };
+/*
+* 显示用户信息的数据库操作
+* */
 function showUserInfoMgr(jsonData,callback) {
     if(typeof callback != "function"){
         return;

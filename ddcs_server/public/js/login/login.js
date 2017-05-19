@@ -13,7 +13,7 @@ $(function () {
     });
     $("#submit").click(function () {
         login();
-    })
+    });
 
     $("#reset").click(function () {
         reset()
@@ -87,12 +87,6 @@ $(function () {
         }
     }
 
-    /*
-     *用户注册
-     * */
-    function register() {
-
-    }
     /*
      * 取消
      * */

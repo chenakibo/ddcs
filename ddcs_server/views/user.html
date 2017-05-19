@@ -9,7 +9,7 @@
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/user.css">
     <link rel="stylesheet" href="../public/libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../public/libs/jAlert/jAlert-v4.css">
@@ -24,7 +24,7 @@
     <script src="../public/js/utils/ux_md5.js"></script>
     <script src="../public/js/utils/serverconfig.js"></script>
     <script src="../public/js/utils/alertMessage.js"></script>
-    <script src="../public/js/siteManager/index.js"></script>
+    <script src="../public/js/user/user.js"></script>
     <script src="../public/js/siteManager/index_ajax.js"></script>
     <script src="../public/js/user/user_ajax.js"></script>
 </head>
@@ -52,18 +52,18 @@
                 <span class="index_title">分布式数据采集系统</span>
             </div>
             <div class="row" id="location">
-                所在位置:<span>站点管理</span>
+                所在位置:<span>用户管理</span>
             </div>
         </div>
         <div class="col-md-2" style="margin-top: 30px">
-           <div class="col-md-6" id="welcome">
+            <div class="col-md-6" id="welcome">
                 <div class="row">
                     欢迎您:<span id="loginUser"></span>
                 </div>
                 <div class="row">
                     角&nbsp;&nbsp;&nbsp;&nbsp;色:<span id="loginRole">管理员</span>
                 </div>
-           </div>
+            </div>
             <div class="col-md-3">
                 <i class="fa fa-2x fa-user" id="userIcon"></i>
             </div>
@@ -76,8 +76,8 @@
         <div class="container-fluid index_middle">
             <div class="row index_middle_head" id="toolbar">
                 <div class="col-md-6">
-                    <!--<button type="button" class="btn btn-default" id="create">-->
-                        <!--<i class="fa fa-pencil"></i>新建</button>-->
+                    <button type="button" class="btn btn-default" id="create">
+                    <i class="fa fa-pencil"></i>新建</button>
                     <button type="button" class="btn btn-default" id="refresh">
                         <i class="fa fa-refresh"></i>刷新</button>
                     <button type="button" class="btn btn-default" id="delete">
@@ -137,6 +137,51 @@
                     <label for="mobile" class="col-sm-2 control-label"><i class="fa fa-2x fa-mobile" style="font-size: 37px"></i></label>
                     <div class="col-sm-10">
                         <p class="form-control" id="mobile"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="register_form">
+        <div class="modal-dialog">
+            <form class="form-horizontal form" style="background-color: #3b6182">
+                <h3 style="text-align: center; margin-top: -8px;">用户注册</h3>
+                <button type="button" class="close" data-dismiss="modal" id="close_btn2"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <div class="form-group">
+                    <label for="usernameReg" class="col-sm-2 control-label"><i class="fa fa-2x fa-user"></i></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="usernameReg" placeholder="用户名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passwordReg" class="col-sm-2 control-label"><i class="fa fa-2x fa-lock"></i></label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="passwordReg" placeholder="密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label"><i class="fa fa-2x fa-envelope"></i></label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="emailReg" placeholder="邮箱">
+                    </div>
+                </div>
+                <!--<div class="form-group">-->
+                <!--<label  style="font-size: 21px;margin-left: 30px"><i class="fa fa-id-card"></i></label>-->
+                <!--<input type="radio" value="0" style="display: inline;margin-left: 50px" name="usertype">&nbsp;管理员-->
+                <!--<input type="radio" value="1" style="display: inline;margin-left: 40px" name="usertype">&nbsp;普通用户-->
+                <!--</div>-->
+                <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label"><i class="fa fa-2x fa-mobile" style="font-size: 37px"></i></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="mobileReg" placeholder="手机">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-5">
+                        <button type="button" class="btn btn-block" id="submitReg">注册</button>
+                    </div>
+                    <div class="col-sm-5">
+                        <button type="button" class="btn btn-block" id="resetReg">重置</button>
                     </div>
                 </div>
             </form>

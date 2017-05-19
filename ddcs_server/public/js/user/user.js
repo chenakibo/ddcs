@@ -17,47 +17,21 @@ $(function () {
     /*
     * 检查用户是否登录
     * */
-    checkUserLogin();
+    // checkUserLogin();
     /*
     * 初始化站点列表
     * */
-    initSiteList();
-
+    initUserList();
     /*
-    * 获取站点列表
+    * 新建用户
     * */
-    getSiteList();
-
-    /*
-     * 删除站点信息
-     * */
-    $("#delete").click(function () {
-        uxConfirm("您确定删除这个站点吗？",function (flag) {
-            if(flag){
-                deleteSite();
-            }
-        })
+    $("#create").click(function () {
+        $('#userInfo').modal();
     });
-    $(".site_oper").click(function () {
-        uxConfirm("您确定删除这个站点吗？",function (flag) {
-            if(flag){
-                deleteSite();
-            }
-        })
+    $("#submitReg").click(function () {
+        register();
+        $('#register_form').modal("hide")
     });
-    /*
-    *查询站点信息的功能
-    * */
-    $("#search_btn").click(function () {
-        querySite();
-    });
-    /*
-    * 刷新站点
-    * */
-    $("#refresh").click(function () {
-        getSiteList();
-    });
-
     /*
     * 显示用户信息
     * */
@@ -65,7 +39,13 @@ $(function () {
         showUserInfo();
         $('#userInfo').modal();
     });
-    
+
+    /*
+    * 查询用户信息
+    * */
+    $("#search_btn").click(function () {
+        queryUser();
+    })
     /*
     * 退出当前用户
     * */
@@ -102,16 +82,16 @@ $(function () {
         location.href="https://localhost:11111/user";
     });
     /*
-    * 定时获取站点列表，间隔30秒
+    * 定时获取用户列表
     * */
-    function getSiteList() {
+    function getUserList() {
         var jsonDataObj = {
-            request :{"mainRequest":"enumSiteList","subRequest":"","ssubRequest":""},
+            request :{"mainRequest":"enumUserList","subRequest":"","ssubRequest":""},
             "data" :{
             },
         };
         var jsonDataStr = JSON.stringify(jsonDataObj);
-        index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithSiteListData);
+        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithUserListData);
         // var timer = setTimeout(function () {
         //     getSiteList();
         // },30000);
@@ -120,7 +100,7 @@ $(function () {
     /*
      * 功能：处理返回的站点数据
      */
-    function dealWithSiteListData(retJson)
+    function dealWithUserListData(retJson)
     {
         var retjsonStr = JSON.parse(retJson);
         if(retjsonStr.rstcode == "success")
@@ -144,8 +124,8 @@ $(function () {
         }
     }
 
-    /***************************初始化站点列表表格********************/
-    function initSiteList()
+    /***************************初始化用户列表表格********************/
+    function initUserList()
     {
         var col = [[
             {
@@ -161,47 +141,39 @@ $(function () {
                     return index+1;
                 }
             },
+            // {
+            //     field: 'id' ,
+            //     title: '站点ID' ,
+            //     align: 'center'
+            // },
             {
-                field: 'id' ,
-                title: '站点ID' ,
+                field: 'username' ,
+                title: '用户名' ,
                 align: 'center'
             },
             {
-                field: 'sitename' ,
-                title: '站点名称' ,
+                field: 'usertype' ,
+                title: '用户角色' ,
                 align: 'center'
             },
             {
-                field: 'ip' ,
-                title: '站点IP' ,
+                field: 'email' ,
+                title: '用户邮箱' ,
                 align: 'center'
             },
             {
-                field: 'port' ,
-                title: '端口' ,
+                field: 'mobile' ,
+                title: '手机号码' ,
                 align: 'center'
             },
             {
-                field: 'state' ,
-                title: '运行状态' ,
-                align: 'center' ,
-                formatter:function(value,row,index){
-                if(row.state == 1) {
-                    var discon = '<i title="运行" class="fa fa-circle fa-spin fa-fw" style="color: #4adc7a"></i>'
-                    return discon;
-                }else{
-                    var err = '<i title="故障" class="fa fa-circle fa-fw" style="color: #e48140"></i>';
-                    return err;
-                }
-            }},
-            {
-                field: 'site_operate' ,
+                field: 'user_operate' ,
                 title: '操&nbsp;&nbsp作' ,
                 align: 'center' ,
                 formatter:function(value,row,index){
                     var icon;
                    if(curUserRole == "0"){
-                       icon= '<i title="操作" class="fa fa-trash fa-fw site_oper" style="color: #ee9b84;cursor: pointer"></i>';
+                       icon= '<i title="操作" class="fa fa-trash fa-fw user_oper" style="color: #ee9b84;cursor: pointer"></i>';
                         return icon;
                    }else {
                        icon= '<i title="操作" class="fa fa-trash fa-fw" style="color: #959595;cursor: no-drop;" ></i>';
@@ -240,23 +212,69 @@ $(function () {
     * */
     function initPageBtn() {
         if(curUserRole == 1){
-            $("#delete").attr("disabled",true)
+            $("#delete").attr("disabled",true);
+            $("#create").attr("disabled",true);
         }
     }
 
     /*
+     * 注册
+     */
+    function register()
+    {
+        var jsonDataObj = {
+            request :{"mainRequest":"createUser","subRequest":"","ssubRequest":""},
+            "data" :{
+                "name":"",
+                "pwd":"",
+                "email":"",
+                "usertype":"",
+                "mobile":"",
+                "createtime":"",
+                "lastmodtime":""
+            },
+        };
+        var username = $("#usernameReg").val();
+        var pwd = $("#passwordReg").val();
+        var email = $("#email").val();
+        var usertype = "1";
+        var mobile = $("#mobile").val();
+
+        jsonDataObj.data.name = username;
+        jsonDataObj.data.pwd = hex_md5(pwd);
+        jsonDataObj.data.email = email;
+        jsonDataObj.data.usertype = usertype;
+        jsonDataObj.data.mobile = mobile;
+        var jsonDataStr = JSON.stringify(jsonDataObj);
+        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithRegisterData);
+    }
+
+    /*
+     * 功能：处理登录数据
+     */
+    function dealWithRegisterData(retJson)
+    {
+        var retjsonStr = JSON.parse(retJson);
+        if(retjsonStr.rstcode == "success")
+        {
+            uxAlert("注册成功！")
+        }else{
+            uxAlert(retjsonStr.desc);
+        }
+    }
+    /*
     * 删除站点
     * */
     function deleteSite() {
-        var site_id = $('#table').bootstrapTable('getSelections')[0].id;
+        var user_id = $('#table').bootstrapTable('getSelections')[0].id;
         var jsonDataObj = {
-            request :{"mainRequest":"deleteSite","subRequest":"","ssubRequest":""},
+            request :{"mainRequest":"deleteUser","subRequest":"","ssubRequest":""},
             "data" :{
-                id:site_id
+                id:user_id
             },
         };
         var jsonDataStr = JSON.stringify(jsonDataObj);
-        index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithDeleteSiteData);
+        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithDeleteSiteData);
     };
     function dealWithDeleteSiteData(retJson) {
         var retjsonStr = JSON.parse(retJson);
@@ -264,7 +282,7 @@ $(function () {
         {
             // $("#table").bootstrapTable("refresh");
             uxAlert("删除成功！");
-            getSiteList();
+            getUserList();
         }else{
             uxAlert(retjsonStr.desc);
         }
@@ -273,7 +291,7 @@ $(function () {
     /*
     * 站点查询
     * */
-    function querySite() {
+    function queryUser() {
         var condition = $("#search_condition").val();
         var searchText = $("#search_text").val();
         if (searchText == ""){
@@ -281,16 +299,16 @@ $(function () {
             return;
         }
         var jsonDataObj = {
-            request :{"mainRequest":"querySite","subRequest":"","ssubRequest":""},
+            request :{"mainRequest":"queryUser","subRequest":"","ssubRequest":""},
             "data" :{
                 condition:condition,
                 searchText:searchText
             },
         };
         var jsonDataStr = JSON.stringify(jsonDataObj);
-        index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithQuerySiteData);
+        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithQueryUserData);
     };
-    function dealWithQuerySiteData(jsonString) {
+    function dealWithQueryUserData(jsonString) {
         var retjsonData = JSON.parse(jsonString);
         if(retjsonData.rstcode = "success"){
             $("#table").bootstrapTable("load",retjsonData.data);
@@ -298,6 +316,10 @@ $(function () {
             uxAlert(retjsonData.desc);
         };
     };
+
+    /*
+    * 显示用户信息
+    * */
     function showUserInfo() {
         var jsonDataObj = {
             request :{"mainRequest":"showUserInfo","subRequest":"","ssubRequest":""},
