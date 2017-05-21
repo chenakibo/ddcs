@@ -46,5 +46,25 @@ $(function () {
     }
     var cxt = $("#myChart").get(0).getContext("2d");
     var line = new Chart(cxt);
-    line.Line(data,config)
+    line.Line(data,config);
+
+
+    /*
+     * 跳转到首页
+     * */
+    $("#site_manager").click(function () {
+        location.href="https://localhost:11111/index";
+    });
+    /*
+     * 跳转到数据采集页面
+     * */
+    $("#data_collect").click(function () {
+        location.href="https://localhost:11111/collect";
+    });
+    /*
+     * 跳转到用户管理页面
+     * */
+    $("#user_manager").click(function () {
+        location.href="https://localhost:11111/user";
+    });
 })

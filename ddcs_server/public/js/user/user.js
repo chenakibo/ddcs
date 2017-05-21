@@ -19,9 +19,13 @@ $(function () {
     * */
     // checkUserLogin();
     /*
-    * 初始化站点列表
+    * 初始化用户列表
     * */
     initUserList();
+    /*
+    * 获取用户列表
+    * */
+    getUserList();
     /*
     * 新建用户
     * */
@@ -45,6 +49,42 @@ $(function () {
     * */
     $("#search_btn").click(function () {
         queryUser();
+    });
+    /*
+    * 删除用户
+    * */
+    $("#delete").click(function () {
+        uxConfirm("您确定要删除该用户？",function (flag) {
+            if(flag){
+                deleteUser();
+                getUserList();
+            }else {
+                return;
+            }
+        })
+    })
+    $(".user_oper_delete").click(function () {
+        uxConfirm("您确定要删除该用户？",function (flag) {
+            if(flag){
+                deleteUser();
+                getUserList();
+            }else {
+                return;
+            }
+        })
+    });
+    /*
+    * 修改密码
+    * */
+    $(".user_oper_mod").click(function () {
+        $("#mod_form").modal();
+    });
+    $("#modify_btn").click(function () {
+        modifyUser();
+        $("#mod_form").modal("hide");
+    });
+    $("#cancel").click(function () {
+        calcel($("#mod_form"));
     })
     /*
     * 退出当前用户
@@ -78,7 +118,7 @@ $(function () {
     /*
      * 跳转到用户管理页面
      * */
-    $("#data_collect").click(function () {
+    $("#user_manager").click(function () {
         location.href="https://localhost:11111/user";
     });
     /*
@@ -98,7 +138,7 @@ $(function () {
     }
 
     /*
-     * 功能：处理返回的站点数据
+     * 功能：处理返回的用户数据
      */
     function dealWithUserListData(retJson)
     {
@@ -173,7 +213,8 @@ $(function () {
                 formatter:function(value,row,index){
                     var icon;
                    if(curUserRole == "0"){
-                       icon= '<i title="操作" class="fa fa-trash fa-fw user_oper" style="color: #ee9b84;cursor: pointer"></i>';
+                       icon= '<i title="操作" class="fa fa-trash fa-fw user_oper_delete" style="color: #ee9b84;cursor: pointer"></i>' +
+                           '&nbsp;&nbsp;&nbsp;&nbsp;<i title="修改" class="fa fa-pencil fa-fw user_oper_mod" style="cursor: pointer"></i>';
                         return icon;
                    }else {
                        icon= '<i title="操作" class="fa fa-trash fa-fw" style="color: #959595;cursor: no-drop;" ></i>';
@@ -263,9 +304,9 @@ $(function () {
         }
     }
     /*
-    * 删除站点
+    * 删除用户
     * */
-    function deleteSite() {
+    function deleteUser() {
         var user_id = $('#table').bootstrapTable('getSelections')[0].id;
         var jsonDataObj = {
             request :{"mainRequest":"deleteUser","subRequest":"","ssubRequest":""},
@@ -274,9 +315,9 @@ $(function () {
             },
         };
         var jsonDataStr = JSON.stringify(jsonDataObj);
-        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithDeleteSiteData);
+        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithDeleteUserData);
     };
-    function dealWithDeleteSiteData(retJson) {
+    function dealWithDeleteUserData(retJson) {
         var retjsonStr = JSON.parse(retJson);
         if(retjsonStr.rstcode == "success")
         {
@@ -346,4 +387,38 @@ $(function () {
             uxAlert(retJsonData.desc);
         };
     };
+    function modifyUser() {
+        var oldPassword = $("#oldpassword").val();
+        var newPassword = $("#newpassword").val();
+        var newPassword2 = $("#newpassword2").val();
+        var user_id = $('#table').bootstrapTable('getSelections')[0].id;
+        if(newPassword != newPassword2){
+            uxAlert("两次密码输入不一致！");
+            return;
+        };
+        var jsonDataObj = {
+            request :{"mainRequest":"modifyUser","subRequest":"","ssubRequest":""},
+            "data" :{
+                id:user_id,
+                oldpwd:oldPassword,
+                newpwd:newPassword
+            },
+        };
+        var jsonDataStr = JSON.stringify(jsonDataObj);
+        user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithModifyUserData)
+    };
+    function dealWithModifyUserData(jsonString) {
+        var retJsonData = JSON.parse(jsonString);
+        if (retJsonData.rstcode == "success"){
+            uxAlert("修改成功！")
+        }else {
+            uxAlert(retJsonData.desc);
+        }
+    };
+    /*
+    * 取消
+    * */
+    function calcel(element) {
+        element.modal("hide")
+    }
 })

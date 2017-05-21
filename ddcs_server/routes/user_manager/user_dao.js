@@ -15,6 +15,7 @@ var userMgr=(function() {
             modifyUserMgr:modifyUserMgr,
             deleteUserMgr:deleteUserMgr,
             showUserInfoMgr:showUserInfoMgr,
+            queryUserMgr:queryUserMgr
         };
     };
     return{
@@ -68,8 +69,23 @@ function createUserMgr(jsonData,callback) {
 /*
 * 修改用户信息的数据库操作
 * */
-function modifyUserMgr() {
-    
+function modifyUserMgr(jsonData,callback) {
+    if (typeof callback != "function"){
+        return;
+    };
+    var sql = "select * from tbl_user where id=$1 and password=$2;";
+    var value = [jsonData.data.id,jsonData.data.oldpwd];
+    _dbOpt.querySql(sql,value,function (err,count,rst) {
+        if(err || count == 0){
+            callback(err,count);
+            return;
+        };
+        var sqlText = "update tbl_user set password=$1 where id=$2;";
+        var sqlValue = [jsonData.data.newpwd,jsonData.data.id];
+        _dbOpt.execSql(sqlText,sqlValue,function (err) {
+            callback(err,"1");
+        })
+    })
 };
 /*
 * 删除用户的数据库操作
@@ -78,7 +94,7 @@ function deleteUserMgr(jsonData,callback) {
     if(typeof callback != "function"){
         return;
     };
-    var sqlText = "delete * from tbl_user where id=$1;";
+    var sqlText = "delete from tbl_user where id=$1;";
     var sqlValue = [jsonData.data.id];
     _dbOpt.execSql(sqlText,sqlValue,function (err) {
         callback(err);
@@ -93,6 +109,30 @@ function showUserInfoMgr(jsonData,callback) {
     };
     var sqlText = "select * from tbl_user where username=$1;";
     var sqlValue = [jsonData.data.currUserName];
+    _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
+        callback(err,rst);
+    })
+};
+/*
+* 用户查询的数据库操作
+* */
+function queryUserMgr(jsonData,callback) {
+    if (typeof callback != "function"){
+        return
+    };
+    var condition = jsonData.data.condition;
+    var sqlText;
+    var sqlValue;
+    if(condition == "id"){
+        sqlText = "select * from tbl_user where id=$1;";
+        sqlValue = [jsonData.data.searchText];
+    }else if(condition == "name"){
+        sqlText = "select * from tbl_user where username like $1;";
+        sqlValue = ["%"+jsonData.data.searchText+"%"];
+    }else {
+        sqlText = "select * from tbl_user where usertype=$1;";
+        sqlValue = [jsonData.data.searchText];
+    };
     _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
         callback(err,rst);
     })

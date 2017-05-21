@@ -89,6 +89,7 @@
                         <select id="search_condition" onselect="id">
                             <option value="id">id</option>
                             <option value="name">name</option>
+                            <option value="role">role</option>
                         </select>
                         <button type="button" class="btn btn-default" id="search_btn">
                             <i class="fa fa-search"></i>
@@ -182,6 +183,40 @@
                     </div>
                     <div class="col-sm-5">
                         <button type="button" class="btn btn-block" id="resetReg">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="mod_form">
+        <div class="modal-dialog">
+            <form class="form-horizontal form" style="background-color: #3b6182">
+                <h3 style="text-align: center; margin-top: -8px;">修改密码</h3>
+                <button type="button" class="close" data-dismiss="modal" id="close_btn3"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <div class="form-group">
+                    <label for="passwordReg" class="col-sm-3 control-label">旧密码:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="oldpassword" placeholder="密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passwordReg" class="col-sm-3 control-label">新密码:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="newpassword" placeholder="密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passwordReg" class="col-sm-3 control-label">再次输入:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="newpassword2" placeholder="密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-5">
+                        <button type="button" class="btn btn-block" id="modify_btn">修改</button>
+                    </div>
+                    <div class="col-sm-5">
+                        <button type="button" class="btn btn-block" id="cancel">取消</button>
                     </div>
                 </div>
             </form>

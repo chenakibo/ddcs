@@ -98,7 +98,7 @@ $(function () {
     /*
      * 跳转到用户管理页面
      * */
-    $("#data_collect").click(function () {
+    $("#user_manager").click(function () {
         location.href="https://localhost:11111/user";
     });
     /*

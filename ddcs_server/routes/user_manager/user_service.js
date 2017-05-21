@@ -52,7 +52,7 @@ function enumUserList(jsonData,callback) {
         return;
     };
 
-    userDao.getInstance().enumUserList(jsonData,function (err,rst) {
+    userDao.getInstance().enumUserListMgr(jsonData,function (err,rst) {
         if(err){
             rtRes.desc = err.detail;
         }else {
@@ -90,8 +90,22 @@ function createUser(jsonData,callback) {
         };
     })
 };
-function modifyUser() {
-    
+function modifyUser(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+    jsonData.data.oldpwd = api.createmd5(jsonData.data.oldpwd);
+    jsonData.data.newpwd = api.createmd5(jsonData.data.newpwd);
+    userDao.getInstance().modifyUserMgr(jsonData,function (err,count) {
+        if(err){
+            rtRes.desc = err.detail;
+        }else if(count ==0){
+            rtRes.desc = "密码输入错误！"
+        }else {
+            rtRes.rstcode = "success";
+        };
+        callback(JSON.stringify(rtRes));
+    })
 };
 /*
 * 删除用户信息
@@ -114,6 +128,23 @@ function showUserInfo(jsonData,callback) {
         return
     };
     userDao.getInstance().showUserInfoMgr(jsonData,function (err,rst) {
+        if(err){
+            rtRes.desc = err.detail;
+        }else {
+            rtRes.rstcode = "success";
+            rtRes.data = rst;
+        };
+        callback(JSON.stringify(rtRes));
+    })
+};
+/*
+* 用户查询
+* */
+function queryUser(jsonData,callback) {
+    if(typeof callback != "function"){
+        return;
+    };
+    userDao.getInstance().queryUserMgr(jsonData,function (err,rst) {
         if(err){
             rtRes.desc = err.detail;
         }else {

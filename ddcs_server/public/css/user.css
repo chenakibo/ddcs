@@ -130,16 +130,16 @@ body{
     margin-top: 50px;
     padding-left: 10px;
 }
-#username,#password,#email,#usertype,#mobile,#usernameReg,#passwordReg,#emailReg,#mobileReg{
+#username,#password,#email,#usertype,#mobile,#usernameReg,#passwordReg,#emailReg,#mobileReg,#oldpassword,#newpassword,#newpassword2{
     background-color: #acd6f0;
 }
-#close_btn,#close_btn2{
+#close_btn,#close_btn2,#close_btn3{
     position: absolute;
     top: 3px;
     right: 6px;
     color: #ffffff;
 }
-#resetReg,#submitReg{
+#resetReg,#submitReg,#modify_btn,#cancel{
     color: #fbf9ff;
     font-size: 16px;
     background-color: #386f95;
@@ -148,5 +148,11 @@ body{
     box-shadow: 0 0 2px 2px #72d5e4;
 }
 #resetReg:hover{
+    box-shadow: 0 0 2px 2px #72d5e4;
+}
+#modify_btn:hover{
+    box-shadow: 0 0 2px 2px #72d5e4;
+}
+#cancel:hover{
     box-shadow: 0 0 2px 2px #72d5e4;
 }
