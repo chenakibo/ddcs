@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e59b455-0b3a-4a9b-846d-10f9fa20971b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ddcs_agent/.idea/dbnavigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/user.css" afterPath="$PROJECT_DIR$/public/css/user.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/collectDatabase/collect.js" afterPath="$PROJECT_DIR$/public/js/collectDatabase/collect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/siteManager/index.js" afterPath="$PROJECT_DIR$/public/js/siteManager/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/user/user.js" afterPath="$PROJECT_DIR$/public/js/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user_manager/user_dao.js" afterPath="$PROJECT_DIR$/routes/user_manager/user_dao.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user_manager/user_service.js" afterPath="$PROJECT_DIR$/routes/user_manager/user_service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/collect.html" afterPath="$PROJECT_DIR$/views/collect.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user.html" afterPath="$PROJECT_DIR$/views/user.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -782,7 +771,7 @@
       <workItem from="1495071380187" duration="14952000" />
       <workItem from="1495350022743" duration="1598000" />
       <workItem from="1495353731337" duration="3152000" />
-      <workItem from="1495362348267" duration="7945000" />
+      <workItem from="1495362348267" duration="8010000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.10">
       <created>1494417144848</created>
@@ -840,15 +829,22 @@
       <option name="project" value="LOCAL" />
       <updated>1495108269464</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modify 5.21">
+      <created>1495377494669</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495377494669</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322719000" />
+    <option name="totallyTimeSpent" value="322784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21022129" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -898,7 +894,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modify 5.10" />
     <MESSAGE value="modify 5.12" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.12" />
+    <MESSAGE value="modify 5.21" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.21" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
