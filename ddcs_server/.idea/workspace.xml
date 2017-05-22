@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e59b455-0b3a-4a9b-846d-10f9fa20971b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/collectDatabase/collect_ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/data_collect/data_dao.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/data_manager/data_dao.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/routes/siteOper.js" afterPath="$PROJECT_DIR$/../ddcs_agent/routes/siteOper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbsql/tbl_hostconfig.sql" afterPath="$PROJECT_DIR$/dbsql/tbl_hostconfig.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/collect.css" afterPath="$PROJECT_DIR$/public/css/collect.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/collectDatabase/collect.js" afterPath="$PROJECT_DIR$/public/js/collectDatabase/collect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/login/login.js" afterPath="$PROJECT_DIR$/public/js/login/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/register/register.js" afterPath="$PROJECT_DIR$/public/js/register/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/user/user.js" afterPath="$PROJECT_DIR$/public/js/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/communicate/server.js" afterPath="$PROJECT_DIR$/routes/communicate/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/routers_controller.js" afterPath="$PROJECT_DIR$/routes/routers_controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/site_manager/site_dao.js" afterPath="$PROJECT_DIR$/routes/site_manager/site_dao.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/site_manager/site_service.js" afterPath="$PROJECT_DIR$/routes/site_manager/site_service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/collect.html" afterPath="$PROJECT_DIR$/views/collect.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user.html" afterPath="$PROJECT_DIR$/views/user.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/data_manager/data_service.js" afterPath="$PROJECT_DIR$/routes/data_collect/data_service.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -926,7 +907,7 @@
       <workItem from="1495350022743" duration="1598000" />
       <workItem from="1495353731337" duration="3152000" />
       <workItem from="1495362348267" duration="8118000" />
-      <workItem from="1495415447478" duration="23227000" />
+      <workItem from="1495415447478" duration="23326000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.10">
       <created>1494417144848</created>
@@ -991,11 +972,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495377494669</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="modify 5.22">
+      <created>1495454202520</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495454202520</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346119000" />
+    <option name="totallyTimeSpent" value="346218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1050,7 +1038,8 @@
     <MESSAGE value="modify 5.10" />
     <MESSAGE value="modify 5.12" />
     <MESSAGE value="modify 5.21" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.21" />
+    <MESSAGE value="modify 5.22" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.22" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
