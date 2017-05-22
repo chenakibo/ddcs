@@ -30,11 +30,12 @@ $(function () {
     * 新建用户
     * */
     $("#create").click(function () {
-        $('#userInfo').modal();
+        $('#register_form').modal();
     });
     $("#submitReg").click(function () {
         register();
         $('#register_form').modal("hide")
+        getUserList();
     });
     /*
     * 显示用户信息
@@ -278,7 +279,7 @@ $(function () {
         var username = $("#usernameReg").val();
         var pwd = $("#passwordReg").val();
         var email = $("#email").val();
-        var usertype = "1";
+        var usertype = $("#admin").val()?$("#admin").val():$("#person").val()
         var mobile = $("#mobile").val();
 
         jsonDataObj.data.name = username;

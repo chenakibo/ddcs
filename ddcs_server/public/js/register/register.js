@@ -14,7 +14,7 @@ $(function () {
     $("#submitReg").click(function () {
         register();
         $('#register_form').modal("hide")
-    })
+    });
 });
 function main(){
     //清空所有session
@@ -71,10 +71,3 @@ function dealWithRegisterData(retJson)
         uxAlert(retjsonStr.desc);
     }
 }
-/*
- * 取消
- * */
-// function cancel()
-// {
-//     window.location.replace("/views/siteManager.html");
-// }

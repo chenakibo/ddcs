@@ -85,4 +85,4 @@ function querySite(jsonData,callback) {
         };
         callback(JSON.stringify(rtRes));
     })
-}
+};

@@ -48,6 +48,7 @@ function getHostConfig() {
         "cpuNumber":"",
         "totalMem":""
     };
+    hostConfig.id = createmd5(os.networkInterfaces().本地连接[1].address);
     hostConfig.hostname = os.hostname();
     hostConfig.platform = os.platform();
     hostConfig.arch = os.arch();

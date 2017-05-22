@@ -90,17 +90,38 @@ body{
 #myChart{
     color: #5577d0;
 }
-.hostInfo_box{
-    padding-top: 20px;
-}
 #hostInfo{
     color: #4790c0;
     font-size: 18px;
+    list-style: none;
 }
 .chart-box{
     height: 758px;
-    border-left: 1px solid #13f5ff;
+    border-left: 1px solid #17fdff;
 }
 #hostInfo li{
     line-height: 50px;
+    color: #e48b55;
+}
+#hostInfo li span{
+    color: #51c0ee;
+}
+.col_hide{
+    display: none;
+}
+.col_name{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#run_site_table{
+    color: #51c0ee;
+}
+#h3,#h32{
+    text-align: center;
+    border-bottom: 1px solid #17fdff;
+    margin-left: -1.5px;
+    padding-bottom: 15px;
+}
+.table_wap{
+    color: #51c0ee;
 }

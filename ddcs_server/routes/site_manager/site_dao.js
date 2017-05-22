@@ -10,9 +10,9 @@ var siteMgr = (function () {
     var _inst;
     function siteMgrCtrl() {
         return{
-            enumSiteListMgr:enumSiteListMgr,
-            deleteSiteMgr:deleteSiteMgr,
-            querySiteMgr : querySiteMgr
+            enumSiteListMgr : enumSiteListMgr,
+            deleteSiteMgr : deleteSiteMgr,
+            querySiteMgr : querySiteMgr,
         }
     };
     return{
@@ -73,6 +73,20 @@ function querySiteMgr(jsonData,callback) {
         sqlText = "select * from tbl_site where sitename like $1;"
     };
     var sqlValue = ["%"+jsonData.data.searchText+"%"];
+    _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
+        callback(err,rst);
+    });
+};
+/*
+* 获取运行站点的数据库操作
+* */
+function enumRunSiteListMgr(jsonData,callback) {
+    if(typeof callback != "function"){
+        return
+    };
+
+    var sqlText = "select * from tbl_site where state=$1;";
+    var sqlValue = ["1"];
     _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
         callback(err,rst);
     })

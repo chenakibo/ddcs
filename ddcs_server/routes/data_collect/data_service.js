@@ -1,10 +1,11 @@
 /**
  * Created by Administrator on 2017/5/8.
  */
-var siteDao = require("./data_dao");
+var dataDao = require("./data_dao");
 
 var siteOperFunc = {
-    enumSiteList : enumSiteList,
+    enumRunSiteList : enumRunSiteList,
+    getHostConfigInfo : getHostConfigInfo
 };
 /*
 * 响应给页面的数据
@@ -33,22 +34,33 @@ function triggerFunction(jsonData,callback) {
 exports.triggerFunction = triggerFunction;
 
 /*
-* 获取站点列表
-* */
-function enumSiteList(jsonData,callback) {
-
-    if (typeof callback != "function"){
+ * 获取运行站点列表
+ * */
+function enumRunSiteList(jsonData,callback) {
+    if(typeof callback != "function"){
         return;
     };
-
-    siteDao.getInstance().enumSiteList(jsonData,function (err,rst) {
+    dataDao.getInstance().enumRunSiteListMgr(jsonData,function (err,rst) {
         if(err){
             rtRes.desc = err.detail;
         }else {
             rtRes.rstcode = "success";
             rtRes.data = rst;
-        }
+        };
         callback(JSON.stringify(rtRes));
+    })
+};
+function getHostConfigInfo(jsonData,callback) {
+    if(typeof callback != "function"){
         return;
+    };
+    dataDao.getInstance().getHostConfigInfoMgr(jsonData,function (err,rst) {
+        if(err){
+            rtRes.desc = err.detail;
+        }else {
+            rtRes.rstcode = "success";
+            rtRes.data = rst;
+        };
+        callback(JSON.stringify(rtRes));
     })
 }

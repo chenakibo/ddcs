@@ -18,7 +18,9 @@ $(function () {
     $("#reset").click(function () {
         reset()
     })
-
+    $("#resetReg").click(function() {
+        reset()
+    })
     function main(){
         //清空所有session
         var sessionObj = window.sessionStorage;

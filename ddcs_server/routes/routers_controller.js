@@ -9,6 +9,7 @@ var router = express.Router();
 var logMgr = require("./login_manager/log_manager");
 var userMgr = require("./user_manager/user_service");
 var siteMgr = require("./site_manager/site_service");
+var dataMgr = require("./data_collect/data_service");
 
 
 router.post("/",function (req,res,next) {
@@ -69,6 +70,10 @@ router.post("/",function (req,res,next) {
         };
         case "/site":{
             siteMgr.triggerFunction(jsonData,callback);
+            return;
+        };
+        case "/collect":{
+            dataMgr.triggerFunction(jsonData,callback);
             return;
         }
     }

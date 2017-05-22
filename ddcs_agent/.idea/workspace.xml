@@ -2,18 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="754fff61-eb2a-4d99-b029-3cbca3e8c360" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ddcs_server/.idea/dbnavigator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/collectDatabase/collect_ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ddcs_server/routes/data_collect/data_dao.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../ddcs_server/routes/data_manager/data_dao.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/siteOper.js" afterPath="$PROJECT_DIR$/routes/siteOper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_server/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/css/user.css" afterPath="$PROJECT_DIR$/../ddcs_server/public/css/user.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/app.js" afterPath="$PROJECT_DIR$/../ddcs_server/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/dbsql/tbl_hostconfig.sql" afterPath="$PROJECT_DIR$/../ddcs_server/dbsql/tbl_hostconfig.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/css/collect.css" afterPath="$PROJECT_DIR$/../ddcs_server/public/css/collect.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/js/collectDatabase/collect.js" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/collectDatabase/collect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/js/siteManager/index.js" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/siteManager/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/js/login/login.js" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/login/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/js/register/register.js" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/register/register.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/js/user/user.js" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/user_manager/user_dao.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/user_manager/user_dao.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/user_manager/user_service.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/user_manager/user_service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/communicate/server.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/communicate/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/routers_controller.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/routers_controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/site_manager/site_dao.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/site_manager/site_dao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/site_manager/site_service.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/site_manager/site_service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/views/collect.html" afterPath="$PROJECT_DIR$/../ddcs_server/views/collect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/views/index.html" afterPath="$PROJECT_DIR$/../ddcs_server/views/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/views/user.html" afterPath="$PROJECT_DIR$/../ddcs_server/views/user.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../ddcs_server/routes/data_manager/data_service.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/data_collect/data_service.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,7 +53,7 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
+            <state relative-caret-position="437">
               <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding />
             </state>
@@ -93,11 +102,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="351">
+              <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="siteOper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/siteOper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -113,10 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="78">
               <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
@@ -149,9 +168,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/javascript/nodejs/4.2.3/core-modules/util.js" />
         <option value="$PROJECT_DIR$/routes/server.js" />
         <option value="$PROJECT_DIR$/routes/client.js" />
-        <option value="$PROJECT_DIR$/routes/siteOper.js" />
         <option value="$PROJECT_DIR$/www" />
         <option value="$PROJECT_DIR$/routes/test.js" />
+        <option value="$PROJECT_DIR$/routes/siteOper.js" />
       </list>
     </option>
   </component>
@@ -186,7 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,6 +233,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -233,7 +252,7 @@
       <recent name="F:\workspace\ddcs_agent" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
+  <component name="RunManager" selected="Node.js.www">
     <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/routes">
       <method />
     </configuration>
@@ -317,8 +336,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.test.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.www" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.www" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.test.js" />
         <item index="2" class="java.lang.String" itemvalue="Node.js.client.js" />
         <item index="3" class="java.lang.String" itemvalue="Node.js.siteOper.js" />
         <item index="4" class="java.lang.String" itemvalue="Node.js.server.js" />
@@ -343,7 +362,8 @@
       <workItem from="1495071458563" duration="6442000" />
       <workItem from="1495350041198" duration="598000" />
       <workItem from="1495353730320" duration="598000" />
-      <workItem from="1495362309974" duration="624000" />
+      <workItem from="1495362309974" duration="736000" />
+      <workItem from="1495415337155" duration="2391000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.16">
       <created>1494935192242</created>
@@ -401,23 +421,32 @@
       <option name="project" value="LOCAL" />
       <updated>1495109177375</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modify 5.21">
+      <created>1495377542185</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495377542185</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43098000" />
+    <option name="totallyTimeSpent" value="45601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20916754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35379463" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35379463" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -425,11 +454,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35379463" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +468,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modify 5.16" />
     <MESSAGE value="modify 5.18" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.18" />
+    <MESSAGE value="modify 5.21" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.21" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -708,29 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/siteOper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -846,8 +851,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="78">
           <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/siteOper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding />
         </state>
       </provider>

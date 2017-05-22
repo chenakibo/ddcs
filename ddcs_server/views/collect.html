@@ -19,13 +19,15 @@
     <script src="../public/libs/jAlert/jAlert-v4.min.js"></script>
     <script src="../public/libs/jAlert/jAlert-functions.min.js"></script>
     <script src="../public/libs/bootstrap-table/dist/bootstrap-table.js"></script>
-    <script src="../public/libs/bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="../public/libs/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
     <script src="../public/js/utils/checkcode.js"></script>
     <script src="../public/js/utils/ux_md5.js"></script>
     <script src="../public/libs/Chart/js/Chart-1.0.1-beta.4.js"></script>
     <script src="../public/js/utils/serverconfig.js"></script>
     <script src="../public/js/utils/alertMessage.js"></script>
     <script src="../public/js/collectDatabase/collect.js"></script>
+    <script src="../public/js/collectDatabase/collect_ajax.js"></script>
+    <script src="../public/js/siteManager/index_ajax.js"></script>
 </head>
 <body>
 <div class="container-fluid content">
@@ -60,7 +62,7 @@
                     欢迎您:<span id="loginUser"></span>
                 </div>
                 <div class="row">
-                    角&nbsp;&nbsp;&nbsp;&nbsp;色:<span id="loginRole">管理员</span>
+                    角&nbsp;&nbsp;&nbsp;&nbsp;色:<span id="loginRole"></span>
                 </div>
             </div>
             <div class="col-md-3">
@@ -73,40 +75,34 @@
     </div>
     <div class="row ">
         <div class="container-fluid index_middle">
-            <div class="col-md-1 index_middle_nav">
+            <div class="col-md-2 index_middle_nav">
                 <div class="row">
                     <h3 class="h3" id="h3">运行站点</h3>
                 </div>
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-10">
-                        <table id="table">
-                            <tr>
-                                <th>序号</th>
-                                <th>名称</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>jj</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>kk</td>
-                            </tr>
-                        </table>
-                    </div>
+                <div class="row table_wap">
+                    <table id="run_site_table">
+                    </table>
                 </div>
             </div>
-            <div class="col-md-11 index_middle_chart">
+            <div class="col-md-10 index_middle_chart">
                 <div class="col-md-3 hostInfo_box">
-                    <h4 id="h4">主机信息</h4>
-                    <ul id="hostInfo">
-                        <li>主机名&nbsp;:&nbsp;<span>chenkaibo</span></li>
-                        <li>主机ip&nbsp;:&nbsp;<span>12355</span></li>
-                        <li>主机port&nbsp;:&nbsp;<span>125522</span></li>
-                    </ul>
+                    <div class="row">
+                        <h3 class="h3" id="h32" style="color: #51c0ee">主机信息</h3>
+                    </div>
+                    <div class="row">
+                        <div id="hostInfo">
+                            <li>主机名&nbsp;:&nbsp;<span id="hostname"></span></li>
+                            <li>平&nbsp;&nbsp;&nbsp;&nbsp;台&nbsp;:&nbsp;<span id="platform"></span></li>
+                            <li>架&nbsp;&nbsp;&nbsp;&nbsp;构&nbsp;:&nbsp;<span id="arch"></span></li>
+                            <li>&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span id="ip"></span></li>
+                            <li>C&nbsp;&nbsp;P&nbsp;&nbsp;U&nbsp;:&nbsp;<span id="cpuinfo"></span></li>
+                            <li>核&nbsp;&nbsp;&nbsp;&nbsp;数&nbsp;:&nbsp;<span id="cpunumber"></span></li>
+                            <li>内&nbsp;&nbsp;&nbsp;&nbsp;存&nbsp;:&nbsp;<span id="totalmem"></span></li>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-9 chart-box">
-                    <canvas id="myChart" width="1200" height="750"></canvas>
+                    <canvas id="myChart" width="1100" height="760"></canvas>
                 </div>
             </div>
         </div>

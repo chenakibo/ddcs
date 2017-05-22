@@ -31,16 +31,17 @@ function checkAgent(rstJsonData,callback) {
     if (typeof callback != "function"){
         return;
     };
-    var sqlText = "select * from tbl_hostconfig where ip = $1;";
-    var sqlValue = [rstJsonData.ip];
+    var sqlText = "select * from tbl_hostconfig where id = $1;";
+    var sqlValue = [rstJsonData.id];
     _dpOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
         if(err){
             callback(err);
             return;
         };
         if(count == 0 || rst.length == 0){
-            var sql = "insert into tbl_hostconfig(hostname,platform,arch,ip,cpuInfo,cpuNumber,totalMem) values($1,$2,$3,$4,$5,$6,$7);";
+            var sql = "insert into tbl_hostconfig(id,hostname,platform,arch,ip,cpuInfo,cpuNumber,totalMem) values($1,$2,$3,$4,$5,$6,$7,$8);";
             var value = [
+                rstJsonData.id,
                 rstJsonData.hostname,
                 rstJsonData.platform,
                 rstJsonData.arch,
@@ -57,8 +58,9 @@ function checkAgent(rstJsonData,callback) {
                 callback(true);
             })
         }else {
-            var sql = "update tbl_hostconfig set hostname=$1,platform=$2,arch=$3,ip=$4,cpuInfo=$5,cpuNumber=$6,totalMem=$7 where ip=$8;";
+            var sql = "update tbl_hostconfig set id=$1,hostname=$2,platform=$3,arch=$4,ip=$5,cpuInfo=$6,cpuNumber=$7,totalMem=$8 where id=$9;";
             var value = [
+                rstJsonData.id,
                 rstJsonData.hostname,
                 rstJsonData.platform,
                 rstJsonData.arch,
@@ -66,7 +68,7 @@ function checkAgent(rstJsonData,callback) {
                 rstJsonData.cpuInfo,
                 rstJsonData.cpuNumber,
                 rstJsonData.totalMem,
-                rstJsonData.ip
+                rstJsonData.id
             ];
             _dpOpt.execSql(sql,value,function (err) {
                 if(err){
@@ -110,14 +112,14 @@ function checkSite(rstJsonData,callback) {
                 callback(true);
             })
         }else {
-            var sql = "update tbl_hostconfig set id=$1,sitename=$2,ip=$3,port=$4,state=$5 where ip=$6;";
+            var sql = "update tbl_site set id=$1,sitename=$2,ip=$3,port=$4,state=$5 where id=$6;";
             var value = [
                 rstJsonData.id,
                 rstJsonData.hostname,
                 rstJsonData.ip,
                 rstJsonData.port,
                 rstJsonData.state,
-                rstJsonData.ip,
+                rstJsonData.id,
             ];
             _dpOpt.execSql(sql,value,function (err) {
                 if(err){

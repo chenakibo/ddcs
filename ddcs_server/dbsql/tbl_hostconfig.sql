@@ -1,6 +1,6 @@
 CREATE TABLE tbl_hostconfig
 (
-  id serial NOT NULL,
+  id VARCHAR(64) NOT NULL,
   hostname VARCHAR(32),
   platform VARCHAR(32),
   arch VARCHAR(32),
@@ -14,7 +14,7 @@ WITH (
 );
 ALTER TABLE tbl_hostconfig
   OWNER TO uxdbwebuser;
-COMMENT ON COLUMN tbl_hostconfig.id IS '主机信息ID';
+COMMENT ON COLUMN tbl_hostconfig.id IS '站点ID';
 COMMENT ON COLUMN tbl_hostconfig.hostname IS '主机名';
 COMMENT ON COLUMN tbl_hostconfig.platform IS '主机操作系统平台';
 COMMENT ON COLUMN tbl_hostconfig.arch IS '主机的CPU架构';
