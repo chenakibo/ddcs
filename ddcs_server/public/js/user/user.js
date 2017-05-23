@@ -278,9 +278,9 @@ $(function () {
         };
         var username = $("#usernameReg").val();
         var pwd = $("#passwordReg").val();
-        var email = $("#email").val();
+        var email = $("#emailReg").val();
         var usertype = $("#admin").val()?$("#admin").val():$("#person").val()
-        var mobile = $("#mobile").val();
+        var mobile = $("#mobileReg").val();
 
         jsonDataObj.data.name = username;
         jsonDataObj.data.pwd = hex_md5(pwd);

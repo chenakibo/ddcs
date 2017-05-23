@@ -5,13 +5,15 @@
 
 var dbOpt = require("../utils/db_conection");
 var _dbOpt = new dbOpt();
+var client = require("../communicate/client");
 
 var dataMgr = (function () {
     var _inst;
     function dataMgrCtrl() {
         return{
             enumRunSiteListMgr:enumRunSiteListMgr,
-            getHostConfigInfoMgr:getHostConfigInfoMgr
+            getHostConfigInfoMgr:getHostConfigInfoMgr,
+            getUsageRateMgr:getUsageRateMgr
         }
     };
     return{
@@ -51,5 +53,15 @@ function getHostConfigInfoMgr(jsonData,callback) {
     var sqlValue = [jsonData.data.id];
     _dbOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
         callback(err,rst);
+    })
+};
+function getUsageRateMgr(jsonData,callback) {
+    if (typeof callback != "function"){
+        return;
+    };
+    var reqData = jsonData.data;
+    client.client(reqData,function (rst) {
+        // console.log("rst:"+JSON.stringify(rst))
+        callback(rst);
     })
 }

@@ -17,10 +17,11 @@ server.on("connection",function (socket) {
     socket.on("data",function (data) {
         var agentData = JSON.parse(data);
         checkAgent(agentData.hostConfig,function (rst) {
-            socket.write(JSON.stringify(rst));
-        });
-        checkSite(agentData.siteInfo,function (rst) {
-            socket.write(JSON.stringify(rst));
+            if(rst){
+                checkSite(agentData.siteInfo,function (rst) {
+                    socket.write(JSON.stringify(rst));
+                });
+            }
         });
     })
 });
@@ -115,7 +116,7 @@ function checkSite(rstJsonData,callback) {
             var sql = "update tbl_site set id=$1,sitename=$2,ip=$3,port=$4,state=$5 where id=$6;";
             var value = [
                 rstJsonData.id,
-                rstJsonData.hostname,
+                rstJsonData.name,
                 rstJsonData.ip,
                 rstJsonData.port,
                 rstJsonData.state,

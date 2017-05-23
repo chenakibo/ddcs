@@ -12,7 +12,7 @@ client.connect("7878",function () {
     };
     agentData.siteInfo = siteOper.getSiteInfo();
     agentData.hostConfig = siteOper.getHostConfig();
-    console.log(agentData)
+    // console.log(agentData)
     client.write(JSON.stringify(agentData));
 });
 client.on("data",function (data) {

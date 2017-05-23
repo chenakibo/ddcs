@@ -5,7 +5,8 @@ var dataDao = require("./data_dao");
 
 var siteOperFunc = {
     enumRunSiteList : enumRunSiteList,
-    getHostConfigInfo : getHostConfigInfo
+    getHostConfigInfo : getHostConfigInfo,
+    getUsageRate : getUsageRate
 };
 /*
 * 响应给页面的数据
@@ -61,6 +62,35 @@ function getHostConfigInfo(jsonData,callback) {
             rtRes.rstcode = "success";
             rtRes.data = rst;
         };
+        callback(JSON.stringify(rtRes));
+    })
+};
+/*
+* 获取使用率
+* */
+function getUsageRate(jsonData,callback) {
+    if (typeof callback != "function"){
+        return;
+    };
+    dataDao.getInstance().getUsageRateMgr(jsonData,function (rst) {
+        var label = new Array();
+        var cpu = new Array();
+        var mem = new Array();
+        for (var i in rst){
+            label.push(rst[i].name);
+            cpu.push(rst[i].cpu);
+            mem.push(rst[i].mem.usage);
+        };
+        var retJson = {
+            label:label,
+            data:{
+                cpu:cpu,
+                mem:mem
+            }
+        };
+        rtRes.rstcode = "success";
+        rtRes.data = retJson;
+        // console.log("retJson:"+JSON.stringify(rtRes))
         callback(JSON.stringify(rtRes));
     })
 }
