@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e59b455-0b3a-4a9b-846d-10f9fa20971b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -906,7 +905,7 @@
       <workItem from="1495353731337" duration="3152000" />
       <workItem from="1495362348267" duration="8118000" />
       <workItem from="1495415447478" duration="23326000" />
-      <workItem from="1495501723570" duration="21880000" />
+      <workItem from="1495501723570" duration="21895000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.10">
       <created>1494417144848</created>
@@ -978,11 +977,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495454202520</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="modify 5.23">
+      <created>1495538996699</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1495538996699</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368098000" />
+    <option name="totallyTimeSpent" value="368113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1038,7 +1044,8 @@
     <MESSAGE value="modify 5.12" />
     <MESSAGE value="modify 5.21" />
     <MESSAGE value="modify 5.22" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.22" />
+    <MESSAGE value="modify 5.23" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.23" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
