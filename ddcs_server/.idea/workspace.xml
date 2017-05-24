@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e59b455-0b3a-4a9b-846d-10f9fa20971b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/routes/cmdtrigger.js" afterPath="$PROJECT_DIR$/../ddcs_agent/routes/cmdtrigger.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/user/user.js" afterPath="$PROJECT_DIR$/public/js/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user.html" afterPath="$PROJECT_DIR$/views/user.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../ddcs_agent/www" afterPath="$PROJECT_DIR$/../ddcs_agent/www.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -910,7 +908,7 @@
       <workItem from="1495362348267" duration="8118000" />
       <workItem from="1495415447478" duration="23326000" />
       <workItem from="1495501723570" duration="21959000" />
-      <workItem from="1495591127886" duration="3049000" />
+      <workItem from="1495591127886" duration="3673000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.10">
       <created>1494417144848</created>
@@ -996,15 +994,22 @@
       <option name="project" value="LOCAL" />
       <updated>1495539007904</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="modify 5.24">
+      <created>1495626096918</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1495626096918</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371226000" />
+    <option name="totallyTimeSpent" value="371850000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21022129" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1057,7 +1062,8 @@
     <MESSAGE value="modify 5.21" />
     <MESSAGE value="modify 5.22" />
     <MESSAGE value="modify 5.23" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.23" />
+    <MESSAGE value="modify 5.24" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.24" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
