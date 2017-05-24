@@ -43,7 +43,8 @@ function getUsageRate(callback) {
     ps.get(function(err, processes) {
 
         var sorted = _.sortBy(processes, 'cpu');
-        var top5  = sorted.reverse().splice(0,7);
+        var top5  = sorted.reverse().splice(0,7
+        );
         callback(err,top5);
     });
 }

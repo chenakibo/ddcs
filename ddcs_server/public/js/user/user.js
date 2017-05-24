@@ -38,6 +38,12 @@ $(function () {
         getUserList();
     });
     /*
+    * 刷新用户信息
+    * */
+    $("#refresh").click(function () {
+        getUserList();
+    })
+    /*
     * 显示用户信息
     * */
     $("#userIcon").click(function () {
@@ -279,7 +285,8 @@ $(function () {
         var username = $("#usernameReg").val();
         var pwd = $("#passwordReg").val();
         var email = $("#emailReg").val();
-        var usertype = $("#admin").val()?$("#admin").val():$("#person").val()
+        var usertype = $('#usertype_radio input[name="usertype"]:checked ').val();
+
         var mobile = $("#mobileReg").val();
 
         jsonDataObj.data.name = username;
