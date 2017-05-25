@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e59b455-0b3a-4a9b-846d-10f9fa20971b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ddcs_agent/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/routes/client.js" afterPath="$PROJECT_DIR$/../ddcs_agent/routes/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/routes/server.js" afterPath="$PROJECT_DIR$/../ddcs_agent/routes/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/routes/siteOper.js" afterPath="$PROJECT_DIR$/../ddcs_agent/routes/siteOper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/routes/test.js" afterPath="$PROJECT_DIR$/../ddcs_agent/routes/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/www.js" afterPath="$PROJECT_DIR$/../ddcs_agent/www.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/communicate/server.js" afterPath="$PROJECT_DIR$/routes/communicate/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/utils/db_conection.js" afterPath="$PROJECT_DIR$/routes/utils/db_conection.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -906,7 +897,7 @@
       <workItem from="1495501723570" duration="21959000" />
       <workItem from="1495591127886" duration="3685000" />
       <workItem from="1495674073840" duration="7183000" />
-      <workItem from="1495700902814" duration="4370000" />
+      <workItem from="1495700902814" duration="4446000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.10">
       <created>1494417144848</created>
@@ -999,11 +990,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495626096918</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="modify 5.25">
+      <created>1495705429339</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1495705429339</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383415000" />
+    <option name="totallyTimeSpent" value="383491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1061,7 +1059,8 @@
     <MESSAGE value="modify 5.22" />
     <MESSAGE value="modify 5.23" />
     <MESSAGE value="modify 5.24" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.24" />
+    <MESSAGE value="modify 5.25" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
