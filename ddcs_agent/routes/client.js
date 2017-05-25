@@ -3,9 +3,10 @@
  */
 var net = require("net");
 var siteOper = require("./siteOper");
+var config = require("../config.json").webserver
 
 var client = new net.Socket();
-client.connect("7878",function () {
+client.connect(config.port,config.ip,function () {
     var agentData = {
         "siteInfo":{},
         "hostConfig":{}
@@ -24,4 +25,4 @@ client.on("data",function (data) {
 });
 client.on("error",function (err) {
     console.log(err)
-})
+});

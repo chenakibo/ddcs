@@ -4,6 +4,7 @@
 var net = require("net");
 var siteOper = require("./siteOper");
 var triggerFunc = require("./cmdtrigger");
+var config = require("../config.json").webserver
 
 var server;
 
@@ -31,6 +32,6 @@ server.on("connection",function (socket) {
         })
     });
     socket.on("error",function (err) {
-        console.log(err)
-    })
+        console.log(err.code)
+    });
 });

@@ -15,6 +15,7 @@ server.listen("7878",function () {
 });
 server.on("connection",function (socket) {
     socket.on("data",function (data) {
+        console.log("data:"+data)
         var agentData = JSON.parse(data);
         checkAgent(agentData.hostConfig,function (rst) {
             if(rst){
@@ -23,7 +24,7 @@ server.on("connection",function (socket) {
                 });
             }
         });
-    })
+    });
 });
 /*
  * 查询数据库中是否有这这个agent
@@ -130,5 +131,36 @@ function checkSite(rstJsonData,callback) {
                 callback(true);
             })
         }
+    })
+};
+/*
+*检查agent状态
+**/
+checkAgentState();
+function checkAgentState() {
+    var sqlText = "select port,ip from tbl_site;";
+    _dpOpt.querySql(sqlText,[],function (err,count,rst) {
+
+        for(var item in rst){
+            var socket = new net.Socket()
+            socket.connect("5656",rst[item].ip,function () {
+                // updateAgentState(rst[item].ip);
+                //     socket.end()
+            });
+            socket.on("error",function (err) {
+                if(err.code != "ECONNREFUSED"){
+                    updateAgentState(rst[item].ip);
+                }
+            })
+        }
+    });
+    setTimeout(function () {
+        checkAgentState();
+    },30000)
+};
+function updateAgentState(ip) {
+    var sqlText = "update tbl_site set state = $1 where ip = $2;";
+    var sqlValue = ["2",ip];
+    _dpOpt.execSql(sqlText,sqlValue,function (err) {
     })
 };

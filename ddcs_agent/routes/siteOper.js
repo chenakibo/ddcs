@@ -15,12 +15,18 @@ function getSiteInfo() {
         "id":"",
         "name":"",
         "ip":"",
-        "port":"7878",
+        "port":"5656",
         "state":""
     };
-    siteInfo.id = createmd5(os.networkInterfaces().本地连接[1].address);
+    if(os.platform() == "win32"){
+        siteInfo.id = createmd5(os.networkInterfaces().本地连接[1].address);
+        siteInfo.ip = os.networkInterfaces().本地连接[1].address;
+    }
+    if(os.platform() == "linux"){
+        siteInfo.id = createmd5(os.networkInterfaces().eth0[0].address);
+        siteInfo.ip = os.networkInterfaces().eth0[0].address;
+    }
     siteInfo.name = os.hostname();
-    siteInfo.ip = os.networkInterfaces().本地连接[1].address;
     siteInfo.state = "1";
 
     return siteInfo;
@@ -48,11 +54,17 @@ function getHostConfig() {
         "cpuNumber":"",
         "totalMem":""
     };
-    hostConfig.id = createmd5(os.networkInterfaces().本地连接[1].address);
     hostConfig.hostname = os.hostname();
     hostConfig.platform = os.platform();
     hostConfig.arch = os.arch();
-    hostConfig.ip = os.networkInterfaces().本地连接[1].address;
+    if(os.platform() == "win32"){
+        hostConfig.id = createmd5(os.networkInterfaces().本地连接[1].address);
+        hostConfig.ip = os.networkInterfaces().本地连接[1].address;
+    }
+    if(os.platform() == "linux"){
+        hostConfig.id = createmd5(os.networkInterfaces().eth0[0].address);
+        hostConfig.ip = os.networkInterfaces().eth0[0].address;
+    }
     hostConfig.cpuInfo = os.cpus()[0].model;
     hostConfig.cpuNumber = os.cpus().length;
     hostConfig.totalMem = os.totalmem();
