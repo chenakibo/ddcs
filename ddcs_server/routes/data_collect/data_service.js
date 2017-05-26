@@ -90,7 +90,7 @@ function getUsageRate(jsonData,callback) {
         };
         rtRes.rstcode = "success";
         rtRes.data = retJson;
-        // console.log("retJson:"+JSON.stringify(rtRes))
+        console.log("retJson:"+JSON.stringify(rtRes))
         callback(JSON.stringify(rtRes));
     })
 }

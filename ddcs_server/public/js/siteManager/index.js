@@ -112,9 +112,9 @@ $(function () {
         };
         var jsonDataStr = JSON.stringify(jsonDataObj);
         index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithSiteListData);
-        // var timer = setTimeout(function () {
-        //     getSiteList();
-        // },30000);
+        var timer = setTimeout(function () {
+            getSiteList();
+        },5000);
     }
 
     /*

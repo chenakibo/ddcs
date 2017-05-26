@@ -113,16 +113,17 @@ $(function () {
                 field: 'sitename' ,
                 title: '站点名称' ,
                 align: 'center',
-                formatter:function (value,row,index) {
-                    var ret = '<span class="col_name">'+value+'</span>';
-                    return ret;
-                }
+                class:"col_hide"
             },
             {
                 field: 'ip' ,
                 title: '主机地址' ,
                 align: 'center',
-                class:'col_hide'
+                // class:'col_hide'
+                formatter:function (value,row,index) {
+                    var ret = '<span class="col_name">'+value+'</span>';
+                    return ret;
+                },
             },
             {
                 field: 'port' ,
@@ -174,6 +175,9 @@ $(function () {
         };
         var jsonDataStr = JSON.stringify(jsonDataObj);
         collect_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithRunSiteListData);
+        // setTimeout(function () {
+        //     getRunSiteList();
+        // },5000)
     };
     function dealWithRunSiteListData(jsonString) {
         var retJsonData = JSON.parse(jsonString);

@@ -20,5 +20,18 @@ var child = require("child_process");
 // });
 // console.log(os.platform())
 // var ls = child.spawn("ipconfig");
-
+var json = {
+    "a":"123",
+    "b":"234",
+    "c":"345"
+};
+if(1){
+    for(var item in json){
+        // console.log(json[item])
+        if( item == "c"){
+            console.log(json[item]);
+            break;
+        };
+    }
+}
 

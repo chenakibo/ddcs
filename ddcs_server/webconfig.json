@@ -21,7 +21,7 @@
   {
       "tcpPort":5656,
       "totaltimeout":180000,
-      "timeout":30000,
+      "timeout":10000,
       "detectionTime":30000,
       "dfsUpdateTime":10000
   }

@@ -8,6 +8,7 @@ var net =require("net");
 var dbOpt = require("../utils/db_conection");
 var _dpOpt = new dbOpt();
 var buffer = require("buffer").Buffer;
+var config = require("../../webconfig.json").server
 
 var server = net.createServer();
 server.listen("7878",function () {
@@ -17,13 +18,19 @@ server.on("connection",function (socket) {
     socket.on("data",function (data) {
         console.log("data:"+data)
         var agentData = JSON.parse(data);
-        checkAgent(agentData.hostConfig,function (rst) {
-            if(rst){
-                checkSite(agentData.siteInfo,function (rst) {
-                    socket.write(JSON.stringify(rst));
-                });
-            }
-        });
+        if(agentData.cmd == "getInfo"){
+            console.log("agentData.cmd"+agentData.cmd)
+            checkAgent(agentData.hostConfig,function (rst) {
+                if(rst){
+                    checkSite(agentData.siteInfo,function (rst) {
+                        socket.write(JSON.stringify(rst));
+                    });
+                }
+            });
+        };
+        if(agentData.cmd == "updateModTime"){
+            updateModTime(agentData.time);
+        }
     });
 });
 /*
@@ -98,13 +105,14 @@ function checkSite(rstJsonData,callback) {
             return;
         };
         if(count == 0 || rst.length == 0){
-            var sql = "insert into tbl_site(id,sitename,ip,port,state) values($1,$2,$3,$4,$5);";
+            var sql = "insert into tbl_site(id,sitename,ip,port,state,lastmodtime) values($1,$2,$3,$4,$5,$6);";
             var value = [
                 rstJsonData.id,
                 rstJsonData.name,
                 rstJsonData.ip,
                 rstJsonData.port,
                 rstJsonData.state,
+                rstJsonData.lastmodtime
             ];
             _dpOpt.execSql(sql,value,function (err) {
                 if(err){
@@ -114,14 +122,15 @@ function checkSite(rstJsonData,callback) {
                 callback(true);
             })
         }else {
-            var sql = "update tbl_site set id=$1,sitename=$2,ip=$3,port=$4,state=$5 where id=$6;";
+            var sql = "update tbl_site set id=$1,sitename=$2,ip=$3,port=$4,state=$5,lastmodtime=$6 where id=$7;";
             var value = [
                 rstJsonData.id,
                 rstJsonData.name,
                 rstJsonData.ip,
                 rstJsonData.port,
                 rstJsonData.state,
-                rstJsonData.id,
+                rstJsonData.lastmodtime,
+                rstJsonData.id
             ];
             _dpOpt.execSql(sql,value,function (err) {
                 if(err){
@@ -138,29 +147,51 @@ function checkSite(rstJsonData,callback) {
 **/
 checkAgentState();
 function checkAgentState() {
-    var sqlText = "select port,ip from tbl_site;";
+    var sqlText = "select ip from tbl_site;";
     _dpOpt.querySql(sqlText,[],function (err,count,rst) {
-
+        console.log(JSON.stringify(rst))
         for(var item in rst){
-            var socket = new net.Socket()
-            socket.connect("5656",rst[item].ip,function () {
-                // updateAgentState(rst[item].ip);
-                //     socket.end()
-            });
-            socket.on("error",function (err) {
-                if(err.code != "ECONNREFUSED"){
-                    updateAgentState(rst[item].ip);
+            // var socket = new net.Socket()
+            // socket.connect("5656",rst[item].ip,function () {
+            //     updateAgentState(rst[item].ip,"1");
+            //         socket.end()
+            // });
+            // socket.on("error",function (err) {
+            //     if(err.code != "ECONNREFUSED"){
+            //         updateAgentState(rst[item].ip,"2");
+            //     }
+            // })
+            // console.log("item:"+rst[item].ip)
+            var ip = rst[item].ip;
+            var sqlText = "select lastmodtime from tbl_site where ip = $1;";
+            var sqlValue = [ip];
+            _dpOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
+                // console.log("rst:"+rst[0].lastmodtime)
+                var currTime = new Date().getTime();
+                if(currTime - rst[0].lastmodtime>config.timeout){
+                    updateAgentState(ip,"2")
                 }
             })
         }
     });
     setTimeout(function () {
         checkAgentState();
-    },30000)
+    },3000)
 };
-function updateAgentState(ip) {
+function updateAgentState(ip,state) {
     var sqlText = "update tbl_site set state = $1 where ip = $2;";
-    var sqlValue = ["2",ip];
+    var sqlValue = [state,ip];
+    // console.log(sqlValue)
+
     _dpOpt.execSql(sqlText,sqlValue,function (err) {
+        // console.log("sql:"+sqlText)
+        return
     })
 };
+function updateModTime(time) {
+    sqlText = "update tbl_site set lastmodtime = $1";
+    sqlValue = [time];
+    _dpOpt.execSql(sqlText,sqlValue,function (err) {
+        return
+    })
+}

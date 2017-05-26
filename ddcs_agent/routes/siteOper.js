@@ -16,18 +16,33 @@ function getSiteInfo() {
         "name":"",
         "ip":"",
         "port":"5656",
-        "state":""
+        "state":"",
+        "lastmodtime":""
     };
     if(os.platform() == "win32"){
         siteInfo.id = createmd5(os.networkInterfaces().本地连接[1].address);
         siteInfo.ip = os.networkInterfaces().本地连接[1].address;
     }
     if(os.platform() == "linux"){
-        siteInfo.id = createmd5(os.networkInterfaces().eth0[0].address);
-        siteInfo.ip = os.networkInterfaces().eth0[0].address;
+        var network = os.networkInterfaces();
+        for(var item in network){
+            if(item.indexOf("eth") == 0 || item.indexOf("ens") == 0){
+                siteInfo.id = createmd5(network[item][0].address);
+                siteInfo.ip = network[item][0].address;
+                break;
+            };
+            // if( item == "eth1"){
+            //     siteInfo.id = createmd5(network.eth1[0].address);
+            //     siteInfo.ip = network.eth1[0].address;
+            //     break;
+            // };
+        }
+        // siteInfo.id = createmd5(os.networkInterfaces().eth0[0].address);
+        // siteInfo.ip = os.networkInterfaces().eth0[0].address;
     }
     siteInfo.name = os.hostname();
     siteInfo.state = "1";
+    siteInfo.lastmodtime = new Date().getTime();
 
     return siteInfo;
 }
@@ -62,8 +77,21 @@ function getHostConfig() {
         hostConfig.ip = os.networkInterfaces().本地连接[1].address;
     }
     if(os.platform() == "linux"){
-        hostConfig.id = createmd5(os.networkInterfaces().eth0[0].address);
-        hostConfig.ip = os.networkInterfaces().eth0[0].address;
+        var network = os.networkInterfaces();
+        for(var item in network){
+            if(item.indexOf("eth") == 0 || item.indexOf("ens") == 0){
+                hostConfig.id = createmd5(network[item][0].address);
+                hostConfig.ip = network[item][0].address;
+                break;
+            };
+            // if( item == "eth1"){
+            //     siteInfo.id = createmd5(network.eth1[0].address);
+            //     siteInfo.ip = network.eth1[0].address;
+            //     break;
+            // };
+        }
+        // hostConfig.id = createmd5(os.networkInterfaces().eth0[0].address);
+        // hostConfig.ip = os.networkInterfaces().eth0[0].address;
     }
     hostConfig.cpuInfo = os.cpus()[0].model;
     hostConfig.cpuNumber = os.cpus().length;
