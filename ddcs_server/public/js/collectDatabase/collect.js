@@ -175,9 +175,9 @@ $(function () {
         };
         var jsonDataStr = JSON.stringify(jsonDataObj);
         collect_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithRunSiteListData);
-        // setTimeout(function () {
-        //     getRunSiteList();
-        // },5000)
+        setTimeout(function () {
+            getRunSiteList();
+        },5000)
     };
     function dealWithRunSiteListData(jsonString) {
         var retJsonData = JSON.parse(jsonString);

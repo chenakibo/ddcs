@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="754fff61-eb2a-4d99-b029-3cbca3e8c360" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/client.js" afterPath="$PROJECT_DIR$/routes/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/cmdtrigger.js" afterPath="$PROJECT_DIR$/routes/cmdtrigger.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/siteOper.js" afterPath="$PROJECT_DIR$/routes/siteOper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/test.js" afterPath="$PROJECT_DIR$/routes/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_server/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/dbsql/tbl_site.sql" afterPath="$PROJECT_DIR$/../ddcs_server/dbsql/tbl_site.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/js/collectDatabase/collect.js" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/collectDatabase/collect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/public/js/siteManager/index.js" afterPath="$PROJECT_DIR$/../ddcs_server/public/js/siteManager/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/communicate/server.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/communicate/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/routes/data_collect/data_service.js" afterPath="$PROJECT_DIR$/../ddcs_server/routes/data_collect/data_service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_server/webconfig.json" afterPath="$PROJECT_DIR$/../ddcs_server/webconfig.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -341,7 +332,7 @@
       <workItem from="1495501499256" duration="11409000" />
       <workItem from="1495587463988" duration="2824000" />
       <workItem from="1495674001060" duration="16793000" />
-      <workItem from="1495761050755" duration="18022000" />
+      <workItem from="1495761050755" duration="18089000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.16">
       <created>1494935192242</created>
@@ -441,11 +432,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495705577360</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="modify 5.26">
+      <created>1495807736807</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1495807736807</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94765000" />
+    <option name="totallyTimeSpent" value="94832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -486,7 +484,8 @@
     <MESSAGE value="modify 5.23" />
     <MESSAGE value="modify 5.24" />
     <MESSAGE value="modify 5.25" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.25" />
+    <MESSAGE value="modify 5.26" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.26" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
