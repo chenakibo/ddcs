@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e59b455-0b3a-4a9b-846d-10f9fa20971b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ddcs_agent/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/user.css" afterPath="$PROJECT_DIR$/public/css/user.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/siteManager/index.js" afterPath="$PROJECT_DIR$/public/js/siteManager/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/user/user.js" afterPath="$PROJECT_DIR$/public/js/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/jquery/build/release.js" afterPath="$PROJECT_DIR$/public/libs/jquery/build/release.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/jquery/jquery.js" afterPath="$PROJECT_DIR$/public/libs/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/public/libs/jquery/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/jquery/speed/jquery-basis.js" afterPath="$PROJECT_DIR$/public/libs/jquery/speed/jquery-basis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/communicate/server.js" afterPath="$PROJECT_DIR$/routes/communicate/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user.html" afterPath="$PROJECT_DIR$/views/user.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -732,7 +722,7 @@
       <workItem from="1495700902814" duration="4561000" />
       <workItem from="1495761040729" duration="16684000" />
       <workItem from="1495846361751" duration="4102000" />
-      <workItem from="1495854057018" duration="2126000" />
+      <workItem from="1495854057018" duration="2172000" />
     </task>
     <task id="LOCAL-00001" summary="modify 5.10">
       <created>1494417144848</created>
@@ -839,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495807793525</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="modify 5.27">
+      <created>1495866387283</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1495866387283</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="406518000" />
+    <option name="totallyTimeSpent" value="406564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -903,7 +900,8 @@
     <MESSAGE value="modify 5.24" />
     <MESSAGE value="modify 5.25" />
     <MESSAGE value="modify 5.26" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify 5.26" />
+    <MESSAGE value="modify 5.27" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify 5.27" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
