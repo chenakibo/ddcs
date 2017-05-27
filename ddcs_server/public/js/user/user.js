@@ -17,7 +17,7 @@ $(function () {
     /*
     * 检查用户是否登录
     * */
-    // checkUserLogin();
+    checkUserLogin();
     /*
     * 初始化用户列表
     * */
@@ -106,7 +106,7 @@ $(function () {
                 {
                     window.sessionStorage.removeItem(i);
                 };
-                location.href = "https://localhost:11111/"
+                window.location.replace("/");
             }else {
                 return;
             }
@@ -116,19 +116,19 @@ $(function () {
     * 跳转到首页
     * */
     $("#site_manager").click(function () {
-        location.href="https://localhost:11111/index";
+        window.location.replace("/index");
     });
     /*
     * 跳转到数据采集页面
     * */
     $("#data_collect").click(function () {
-        location.href="https://localhost:11111/collect";
+        window.location.replace("/collect");
     });
     /*
      * 跳转到用户管理页面
      * */
     $("#user_manager").click(function () {
-        location.href="https://localhost:11111/user";
+        window.location.replace("/user");
     });
     /*
     * 定时获取用户列表
@@ -168,7 +168,7 @@ $(function () {
         if(window.sessionStorage.curUserName == undefined || window.sessionStorage.curUserRole == undefined){
             uxAlert("您还未登录，请先登录！");
             setTimeout(function () {
-                location.href = "https://localhost:11111/"
+                window.location.replace("/");
             },2000)
         }
     }

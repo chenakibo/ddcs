@@ -54,8 +54,7 @@ $(function () {
         /*
          * 首先校验验证码
          * */
-        // var flag = checkCode();
-        var flag = true;
+        var flag = checkCode();
         if(flag){
             var jsonDataObj = {
                 "data" :{"name":"","pwd":""},
@@ -82,7 +81,8 @@ $(function () {
             window.sessionStorage.curUserRole = retjsonStr.data.role;//0:管理员，1:普通用户
             window.sessionStorage.curUserName = retjsonStr.data.username; //用户名
             // window.sessionStorage.userHandle = retjsonStr.data.userhandle;//sessionID
-            location.href="https://localhost:11111/index";
+            window.location.replace("/index");
+            // location.href="https://localhost:11111/index";
             // uxAlert("你好："+retjsonStr.data.name)
         }else{
             uxAlert(retjsonStr.desc);
