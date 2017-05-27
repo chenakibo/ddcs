@@ -130,7 +130,7 @@ body{
     margin-top: 50px;
     padding-left: 10px;
 }
-#username,#password,#email,#usertype,#mobile,#usernameReg,#passwordReg,#emailReg,#mobileReg,#oldpassword,#newpassword,#newpassword2{
+#username,#password,#email,#usertype,#mobile,#usernameReg,#passwordReg,#emailReg,#mobileReg,#oldpassword,#newpassword,#newpassword2,#username_password{
     background-color: #acd6f0;
 }
 #close_btn,#close_btn2,#close_btn3{

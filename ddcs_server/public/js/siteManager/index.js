@@ -114,7 +114,7 @@ $(function () {
         index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithSiteListData);
         var timer = setTimeout(function () {
             getSiteList();
-        },5000);
+        },10000);
     }
 
     /*
@@ -216,6 +216,7 @@ $(function () {
             columns: col,
             idField:"number",
             singleSelect:true,
+            clickToSelect:true,
             rowStyle:function (row,index) {
                 // var classes = ['success'];
                 if ((index+1) % 2 === 0) {
@@ -225,7 +226,6 @@ $(function () {
                 }
                 return {};
             },
-            clickToSelect:true,
         });
     }
     // function listenTable()
@@ -248,15 +248,21 @@ $(function () {
     * 删除站点
     * */
     function deleteSite() {
-        var site_id = $('#table').bootstrapTable('getSelections')[0].id;
-        var jsonDataObj = {
-            request :{"mainRequest":"deleteSite","subRequest":"","ssubRequest":""},
-            "data" :{
-                id:site_id
-            },
-        };
-        var jsonDataStr = JSON.stringify(jsonDataObj);
-        index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithDeleteSiteData);
+        var site_state = $('#table').bootstrapTable('getSelections')[0].state;
+        if(site_state == "1"){
+            uxAlert("站点正在运行，不能删除！");
+            return;
+        }else {
+            var site_id = $('#table').bootstrapTable('getSelections')[0].id;
+            var jsonDataObj = {
+                request :{"mainRequest":"deleteSite","subRequest":"","ssubRequest":""},
+                "data" :{
+                    id:site_id
+                },
+            };
+            var jsonDataStr = JSON.stringify(jsonDataObj);
+            index_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithDeleteSiteData);
+        }
     };
     function dealWithDeleteSiteData(retJson) {
         var retjsonStr = JSON.parse(retJson);

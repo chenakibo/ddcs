@@ -84,6 +84,8 @@ $(function () {
     * 修改密码
     * */
     $(".user_oper_mod").click(function () {
+        var username = $('#table').bootstrapTable('getSelections')[0].username;
+        $("#username_password").html(username);
         $("#mod_form").modal();
     });
     $("#modify_btn").click(function () {
@@ -140,8 +142,8 @@ $(function () {
         var jsonDataStr = JSON.stringify(jsonDataObj);
         user_ajaxInterface.ajaxRequest(false,jsonDataStr,dealWithUserListData);
         // var timer = setTimeout(function () {
-        //     getSiteList();
-        // },30000);
+        //     getUserList();
+        // },10000);
     }
 
     /*
@@ -201,7 +203,14 @@ $(function () {
             {
                 field: 'usertype' ,
                 title: '用户角色' ,
-                align: 'center'
+                align: 'center',
+                formatter:function (value,row,index) {
+                    if(value == 0){
+                        return "管理员";
+                    }else {
+                        return "普通用户";
+                    }
+                }
             },
             {
                 field: 'email' ,
@@ -346,6 +355,11 @@ $(function () {
         if (searchText == ""){
             uxAlert("搜索条件不能为空！");
             return;
+        };
+        if(searchText == "管理员"){
+            searchText = 0;
+        }else {
+            searchText = 1;
         }
         var jsonDataObj = {
             request :{"mainRequest":"queryUser","subRequest":"","ssubRequest":""},

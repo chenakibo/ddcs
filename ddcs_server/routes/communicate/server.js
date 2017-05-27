@@ -16,10 +16,10 @@ server.listen("7878",function () {
 });
 server.on("connection",function (socket) {
     socket.on("data",function (data) {
-        console.log("data:"+data)
+        // console.log("data:"+data)
         var agentData = JSON.parse(data);
         if(agentData.cmd == "getInfo"){
-            console.log("agentData.cmd"+agentData.cmd)
+            // console.log("agentData.cmd"+agentData.cmd)
             checkAgent(agentData.hostConfig,function (rst) {
                 if(rst){
                     checkSite(agentData.siteInfo,function (rst) {
@@ -149,7 +149,7 @@ checkAgentState();
 function checkAgentState() {
     var sqlText = "select ip from tbl_site;";
     _dpOpt.querySql(sqlText,[],function (err,count,rst) {
-        console.log(JSON.stringify(rst))
+        // console.log(JSON.stringify(rst))
         for(var item in rst){
             // var socket = new net.Socket()
             // socket.connect("5656",rst[item].ip,function () {
