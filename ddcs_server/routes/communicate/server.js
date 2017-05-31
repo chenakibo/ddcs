@@ -29,7 +29,7 @@ server.on("connection",function (socket) {
             });
         };
         if(agentData.cmd == "updateModTime"){
-            updateModTime(agentData.time);
+            updateModTime(agentData.time,agentData.ip);
         }
     });
 });
@@ -151,33 +151,28 @@ function checkAgentState() {
     _dpOpt.querySql(sqlText,[],function (err,count,rst) {
         // console.log(JSON.stringify(rst))
         for(var item in rst){
-            // var socket = new net.Socket()
-            // socket.connect("5656",rst[item].ip,function () {
-            //     updateAgentState(rst[item].ip,"1");
-            //         socket.end()
-            // });
-            // socket.on("error",function (err) {
-            //     if(err.code != "ECONNREFUSED"){
-            //         updateAgentState(rst[item].ip,"2");
-            //     }
-            // })
-            // console.log("item:"+rst[item].ip)
-            var ip = rst[item].ip;
-            var sqlText = "select lastmodtime from tbl_site where ip = $1;";
-            var sqlValue = [ip];
-            _dpOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
-                // console.log("rst:"+rst[0].lastmodtime)
-                var currTime = new Date().getTime();
-                if(currTime - rst[0].lastmodtime>config.timeout){
-                    updateAgentState(ip,"2")
-                }
-            })
+            executeItem(rst[item]);
         }
     });
     setTimeout(function () {
         checkAgentState();
     },3000)
 };
+function executeItem(item) {
+    var ip = item.ip;
+    var sqlText = "select lastmodtime from tbl_site where ip = $1;";
+    var sqlValue = [ip];
+    _dpOpt.querySql(sqlText,sqlValue,function (err,count,rst) {
+        // console.log("rst:"+rst[0].lastmodtime)
+        var currTime = new Date().getTime();
+        // console.log("currTime:"+currTime);
+        // console.log("lastmodtime:"+rst[0].lastmodtime)
+        // console.log("currTime - lastmodtime:"+(currTime - rst[0].lastmodtime))
+        if((currTime - rst[0].lastmodtime )> config.timeout){
+            updateAgentState(ip,"2")
+        }
+    })
+}
 function updateAgentState(ip,state) {
     var sqlText = "update tbl_site set state = $1 where ip = $2;";
     var sqlValue = [state,ip];
@@ -188,9 +183,9 @@ function updateAgentState(ip,state) {
         return
     })
 };
-function updateModTime(time) {
-    sqlText = "update tbl_site set lastmodtime = $1";
-    sqlValue = [time];
+function updateModTime(time,ip) {
+    sqlText = "update tbl_site set lastmodtime = $1 where ip = $2;";
+    sqlValue = [time,ip];
     _dpOpt.execSql(sqlText,sqlValue,function (err) {
         return
     })

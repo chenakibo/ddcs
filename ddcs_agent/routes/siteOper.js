@@ -99,3 +99,23 @@ function getHostConfig() {
     return hostConfig;
 };
 exports.getHostConfig=getHostConfig;
+/*
+ * 获取主机配置信息
+ * */
+function getIp() {
+    var ip;
+    if(os.platform() == "win32"){
+        ip = os.networkInterfaces().本地连接[1].address;
+    }
+    if(os.platform() == "linux"){
+        var network = os.networkInterfaces();
+        for(var item in network){
+            if(item.indexOf("eth") == 0 || item.indexOf("ens") == 0){
+                ip = network[item][0].address;
+                break;
+            };
+        }
+    };
+    return ip;
+};
+exports.getIp = getIp;

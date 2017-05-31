@@ -3,7 +3,7 @@
  */
 var net = require("net");
 var siteOper = require("./siteOper");
-var config = require("../config.json").webserver
+var config = require("../config.json").webserver;
 
 var client = new net.Socket();
 client.connect(config.port,config.ip,function () {
@@ -29,9 +29,11 @@ client.on("error",function (err) {
 });
 function updateModTime() {
     var currTime = new Date().getTime();
+    var ip = siteOper.getIp();
     var reqJson = {
         "cmd":"updateModTime",
-        "time":currTime
+        "time":currTime,
+        "ip":ip
     }
     var socket =new net.Socket();
     socket.connect(config.port,config.ip,function () {
